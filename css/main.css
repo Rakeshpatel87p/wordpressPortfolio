@@ -1,12 +1,13 @@
 * {
-  background: black;
   padding: 0;
   margin: 0;
 }
 
 header {
-  background: url("../img/keyboardRedLight.jpg");
-  background-size: cover;
+  background-color: #d07c7c;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,14 +18,26 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: auto;
-  min-height: 300px;
+  min-height: 500px;
   height: 100%;
-  text-align: center;
 }
 
-header h1,
-header p {
+header .text {
+  background: transparent;
   color: white;
+  margin-left: 75px;
+}
+
+header h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 75px;
+  font-weight: 100;
+}
+
+header p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  margin-top: 10px;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=main.css.map */

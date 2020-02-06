@@ -1,24 +1,38 @@
 * {
-  background: black;
   padding: 0;
   margin: 0;
 }
 
-//header component
-
 header {
-  background: url("../img/keyboardRedLight.jpg");
-  background-size: cover;
+  //background: url("../img/keyboardLight.jpg");
+  background-color: #d07c7c;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: auto;
-  min-height: 300px;
+  //margin: auto;
+  min-height: 500px;
   height: 100%;
-  text-align: center;
+  //text-align: center;
 
-  h1,
-  p {
+  .text {
+    background: transparent;
     color: white;
+    margin-left: 75px;
+  }
+
+  h1 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 75px;
+    font-weight: 100;
+  }
+
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+    text-transform: uppercase;
   }
 }
