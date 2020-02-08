@@ -40,4 +40,41 @@ header p {
   margin-top: 10px;
   text-transform: uppercase;
 }
+
+.about-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px;
+  text-align: center;
+}
+
+.about-me div {
+  border: 1px solid orange;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  min-height: 350px;
+  width: 100%;
+}
+
+.about-me div:first-child {
+  background: grey;
+  margin-right: 75px;
+}
+
+.about-me div:nth-child(2) {
+  background: oraange;
+}
 /*# sourceMappingURL=main.css.map */

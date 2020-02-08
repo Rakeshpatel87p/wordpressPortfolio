@@ -1,3 +1,5 @@
+$standard-margin: 50px;
+
 * {
   padding: 0;
   margin: 0;
@@ -34,5 +36,31 @@ header {
     font-size: 25px;
     margin-top: 10px;
     text-transform: uppercase;
+  }
+}
+
+.about-me {
+  display: flex;
+  justify-content: center;
+  margin: $standard-margin;
+  text-align: center;
+
+  div {
+    border: 1px solid orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    min-height: 350px;
+    width: 100%;
+
+    &:first-child {
+      background: grey;
+      margin-right: 75px;
+    }
+
+    &:nth-child(2) {
+      background: oraange;
+    }
   }
 }
