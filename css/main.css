@@ -48,7 +48,7 @@ header p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 50px;
+  margin: 50px 20px;
   text-align: center;
 }
 
@@ -76,5 +76,37 @@ header p {
 
 .about-me div:nth-child(2) {
   background: oraange;
+}
+
+.clients-served {
+  margin: 50px 20px;
+}
+
+.clients-served ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.clients-served li {
+  border: 1px solid black;
+  list-style-type: none;
+  margin: 0 15px 15px 0;
+  width: 30%;
+}
+
+.clients-served li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 /*# sourceMappingURL=main.css.map */

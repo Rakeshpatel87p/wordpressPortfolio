@@ -1,4 +1,4 @@
-$standard-margin: 50px;
+$standard-margin: 50px 20px;
 
 * {
   padding: 0;
@@ -61,6 +61,31 @@ header {
 
     &:nth-child(2) {
       background: oraange;
+    }
+  }
+}
+
+.clients-served {
+  margin: $standard-margin;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  li {
+    border: 1px solid black;
+    list-style-type: none;
+    margin: 0 15px 15px 0;
+    width: 30%;
+
+    &:hover {
+      //add background shadow
+      transform: scale(1.2);
+      transition: all 1s;
     }
   }
 }
