@@ -1,6 +1,19 @@
+$primary-font: "Work Sans", sans-serif;
+$secondary-font: "Open Sans", sans-serif;
 $standard-margin: 50px 20px;
+$desktop: 960px;
+
+@mixin section-headers {
+  font-family: $primary-font;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: underline;
+}
 
 * {
+  background: black;
+  color: white;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -25,6 +38,11 @@ header {
     margin-left: 75px;
   }
 
+  h1,
+  p {
+    background: transparent;
+  }
+
   h1 {
     font-family: "Work Sans", sans-serif;
     font-size: 75px;
@@ -39,36 +57,71 @@ header {
   }
 }
 
-.about-me {
-  display: flex;
-  justify-content: center;
+.skill-set {
   margin: $standard-margin;
-  text-align: center;
 
-  div {
-    border: 1px solid orange;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    min-height: 350px;
-    width: 100%;
+  h2 {
+    @include section-headers();
+  }
 
-    &:first-child {
-      background: grey;
-      margin-right: 75px;
+  ul {
+    align-items: stretch;
+    font-family: $secondary-font;
+    margin: 0 auto;
+    max-width: 1250px;
+
+    @media only screen and (min-width: $desktop) {
+      display: flex;
+      justify-content: space-around;
+      flex-basis: 1;
+    }
+  }
+
+  li {
+    //border: 1px solid black;
+    height: 100%;
+    list-style-type: none;
+    margin: 30px auto 0;
+    position: relative;
+    text-align: center;
+    width: 50%;
+
+    @media only screen and (min-width: $desktop) {
+      padding: 0 50px;
+      width: 33%;
     }
 
-    &:nth-child(2) {
-      background: oraange;
+    div {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      transition: all 0.5s ease-in-out;
+      width: 250px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    p {
+      margin-top: 10px;
+      //position: absolute;
     }
   }
 }
 
 .clients-served {
   margin: $standard-margin;
+
+  h2 {
+    @include section-headers();
+    margin-bottom: 40px;
+  }
   ul {
     display: flex;
+    font-family: $secondary-font;
     flex-wrap: wrap;
     margin: auto;
     justify-content: center;
@@ -77,15 +130,36 @@ header {
   }
 
   li {
-    border: 1px solid black;
+    border: 1px solid white;
+    border-radius: 20px;
     list-style-type: none;
     margin: 0 15px 15px 0;
     width: 30%;
-
-    &:hover {
-      //add background shadow
-      transform: scale(1.2);
-      transition: all 1s;
-    }
   }
 }
+
+// .about-me {
+//   display: flex;
+//   justify-content: center;
+//   margin: $standard-margin;
+//   text-align: center;
+
+//   div {
+//     border: 1px solid orange;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     margin: auto;
+//     min-height: 350px;
+//     width: 100%;
+
+//     &:first-child {
+//       background: grey;
+//       margin-right: 75px;
+//     }
+
+//     &:nth-child(2) {
+//       background: oraange;
+//     }
+//   }
+// }
