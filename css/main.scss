@@ -20,7 +20,9 @@ $desktop: 960px;
 
 header {
   //background: url("../img/keyboardLight.jpg");
-  background-color: #d07c7c;
+  //background-color: #d07c7c;
+  border-bottom: 1px solid white;
+  box-shadow: 5px 10px #888888;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -84,7 +86,7 @@ header {
     margin: 30px auto 0;
     position: relative;
     text-align: center;
-    width: 50%;
+    width: 100%;
 
     @media only screen and (min-width: $desktop) {
       padding: 0 50px;
@@ -131,10 +133,38 @@ header {
 
   li {
     border: 1px solid white;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     list-style-type: none;
-    margin: 0 15px 15px 0;
-    width: 30%;
+    margin-bottom: 40px;
+    text-align: left;
+    width: 100%;
+
+    @media only screen and (min-width: $desktop) {
+      display: flex;
+      flex-direction: column;
+      margin: 0 15px 15px 0;
+      width: 30%;
+    }
+
+    .img-wrapper {
+      background: white;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      height: 150px;
+      padding: 50px 5px;
+      text-align: center;
+    }
+
+    img {
+      background: transparent;
+      margin: 0 auto;
+      width: 150px;
+    }
+    p {
+      margin: 30px 0;
+      padding: 0 20px;
+    }
   }
 }
 
