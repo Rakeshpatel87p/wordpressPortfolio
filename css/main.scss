@@ -60,10 +60,27 @@ header {
 }
 
 .skill-set {
+  display: flex;
+  justify-content: center;
   margin: $standard-margin;
 
   h2 {
     @include section-headers();
+    margin: auto;
+    text-decoration: none;
+
+    .underline--magical {
+      background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 0.2em;
+      background-position: 0 105%;
+      transition: background-size 0.25s ease-in;
+
+      &:hover {
+        background-size: 100% 88%;
+        color: blue;
+      }
+    }
   }
 
   ul {
@@ -100,7 +117,7 @@ header {
 
     img {
       transition: all 0.5s ease-in-out;
-      width: 250px;
+      width: 150px;
 
       &:hover {
         transform: scale(1.1);
@@ -138,6 +155,7 @@ header {
     list-style-type: none;
     margin-bottom: 40px;
     text-align: left;
+    transition: 0.5s transform ease;
     width: 100%;
 
     @media only screen and (min-width: $desktop) {
@@ -145,6 +163,15 @@ header {
       flex-direction: column;
       margin: 0 15px 15px 0;
       width: 30%;
+    }
+
+    &:hover {
+      box-shadow: 0 2px 16px #c4c4c7;
+      transform: translateY(-12px);
+    }
+
+    a {
+      text-decoration: none;
     }
 
     .img-wrapper {
@@ -168,28 +195,32 @@ header {
   }
 }
 
-// .about-me {
-//   display: flex;
-//   justify-content: center;
-//   margin: $standard-margin;
-//   text-align: center;
+footer {
+  background: white;
+}
 
-//   div {
-//     border: 1px solid orange;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     margin: auto;
-//     min-height: 350px;
-//     width: 100%;
+.about-me {
+  display: flex;
+  justify-content: center;
+  margin: $standard-margin;
+  text-align: center;
 
-//     &:first-child {
-//       background: grey;
-//       margin-right: 75px;
-//     }
+  div {
+    border: 1px solid orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    min-height: 350px;
+    width: 100%;
 
-//     &:nth-child(2) {
-//       background: oraange;
-//     }
-//   }
-// }
+    &:first-child {
+      background: grey;
+      margin-right: 75px;
+    }
+
+    &:nth-child(2) {
+      background: oraange;
+    }
+  }
+}

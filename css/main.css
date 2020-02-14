@@ -53,6 +53,12 @@ header p {
 }
 
 .skill-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 50px 20px;
 }
 
@@ -61,6 +67,22 @@ header p {
   font-weight: 400;
   text-align: center;
   text-decoration: underline;
+  margin: auto;
+  text-decoration: none;
+}
+
+.skill-set h2 .underline--magical {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 105%;
+  -webkit-transition: background-size 0.25s ease-in;
+  transition: background-size 0.25s ease-in;
+}
+
+.skill-set h2 .underline--magical:hover {
+  background-size: 100% 88%;
+  color: blue;
 }
 
 .skill-set ul {
@@ -108,7 +130,7 @@ header p {
 .skill-set li img {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  width: 250px;
+  width: 150px;
 }
 
 .skill-set li img:hover {
@@ -154,6 +176,10 @@ header p {
   list-style-type: none;
   margin-bottom: 40px;
   text-align: left;
+  -webkit-transition: 0.5s -webkit-transform ease;
+  transition: 0.5s -webkit-transform ease;
+  transition: 0.5s transform ease;
+  transition: 0.5s transform ease, 0.5s -webkit-transform ease;
   width: 100%;
 }
 
@@ -169,6 +195,17 @@ header p {
     margin: 0 15px 15px 0;
     width: 30%;
   }
+}
+
+.clients-served li:hover {
+  -webkit-box-shadow: 0 2px 16px #c4c4c7;
+          box-shadow: 0 2px 16px #c4c4c7;
+  -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
+}
+
+.clients-served li a {
+  text-decoration: none;
 }
 
 .clients-served li .img-wrapper {
@@ -189,5 +226,46 @@ header p {
 .clients-served li p {
   margin: 30px 0;
   padding: 0 20px;
+}
+
+footer {
+  background: white;
+}
+
+.about-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px 20px;
+  text-align: center;
+}
+
+.about-me div {
+  border: 1px solid orange;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  min-height: 350px;
+  width: 100%;
+}
+
+.about-me div:first-child {
+  background: grey;
+  margin-right: 75px;
+}
+
+.about-me div:nth-child(2) {
+  background: oraange;
 }
 /*# sourceMappingURL=main.css.map */
