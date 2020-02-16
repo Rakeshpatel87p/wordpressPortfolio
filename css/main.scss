@@ -62,7 +62,7 @@ header {
 
 .skill-set {
   background: beige;
-  //margin: $standard-margin;
+  padding: 50px 0;
 
   .container {
     @media only screen and (min-width: $desktop) {
@@ -76,8 +76,11 @@ header {
   h2 {
     @include section-headers();
     font-size: 40px;
-    margin: auto 45px auto 0;
     text-decoration: none;
+
+    @media only screen and (min-width: $desktop) {
+      margin: auto 45px auto 0;
+    }
 
     .underline--magical {
       background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
@@ -95,12 +98,14 @@ header {
 
   ul {
     align-items: stretch;
-    border-left: 1px dashed black;
     font-family: $secondary-font;
     margin: 0 auto;
     max-width: 1250px;
+    padding: 0;
 
     @media only screen and (min-width: $desktop) {
+      border-left: 1px dashed black;
+      border-bottom-left-radius: 15px;
       display: flex;
       justify-content: space-around;
       flex-basis: 1;
@@ -153,8 +158,9 @@ header {
     display: flex;
     font-family: $secondary-font;
     flex-wrap: wrap;
-    margin: auto;
     justify-content: center;
+    margin: auto;
+    padding: 0;
     text-align: center;
     width: 100%;
   }
@@ -186,12 +192,15 @@ header {
       text-decoration: none;
     }
 
-    .img-wrapper {
+    .wrapper {
+      align-items: center;
       background: beige;
       border-bottom: 2px dashed grey;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
+      display: flex;
       height: 150px;
+      justify-content: center;
       padding: 50px 5px;
       text-align: center;
     }
@@ -209,7 +218,18 @@ header {
 }
 
 footer {
-  background: white;
+  background: beige;
+  height: 100%;
+  width: 100%;
+
+  .wrapper {
+    margin: $standard-margin;
+  }
+  .about {
+    img {
+      width: 200px;
+    }
+  }
 }
 
 .about-me {

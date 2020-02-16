@@ -54,6 +54,7 @@ header p {
 
 .skill-set {
   background: beige;
+  padding: 50px 0;
 }
 
 @media only screen and (min-width: 960px) {
@@ -73,8 +74,13 @@ header p {
   text-align: center;
   text-decoration: underline;
   font-size: 40px;
-  margin: auto 45px auto 0;
   text-decoration: none;
+}
+
+@media only screen and (min-width: 960px) {
+  .skill-set h2 {
+    margin: auto 45px auto 0;
+  }
 }
 
 .skill-set h2 .underline--magical {
@@ -95,14 +101,16 @@ header p {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  border-left: 1px dashed black;
   font-family: "Open Sans", sans-serif;
   margin: 0 auto;
   max-width: 1250px;
+  padding: 0;
 }
 
 @media only screen and (min-width: 960px) {
   .skill-set ul {
+    border-left: 1px dashed black;
+    border-bottom-left-radius: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -168,10 +176,11 @@ header p {
   font-family: "Open Sans", sans-serif;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: auto;
+  padding: 0;
   text-align: center;
   width: 100%;
 }
@@ -214,12 +223,21 @@ header p {
   text-decoration: none;
 }
 
-.clients-served li .img-wrapper {
+.clients-served li .wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: beige;
   border-bottom: 2px dashed grey;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 150px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 50px 5px;
   text-align: center;
 }
@@ -236,7 +254,17 @@ header p {
 }
 
 footer {
-  background: white;
+  background: beige;
+  height: 100%;
+  width: 100%;
+}
+
+footer .wrapper {
+  margin: 50px 20px;
+}
+
+footer .about img {
+  width: 200px;
 }
 
 .about-me {
