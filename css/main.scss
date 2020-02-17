@@ -30,7 +30,7 @@ header {
   flex-direction: column;
   justify-content: center;
   //margin: auto;
-  min-height: 500px;
+  min-height: 600px;
   height: 100%;
   //text-align: center;
 
@@ -223,56 +223,99 @@ footer {
   width: 100%;
 
   .wrapper {
-    padding: 30px 20px 50px;
+    margin: $standard-margin;
+    padding: 50px 20px 50px;
     text-align: center;
+
+    @media only screen and (min-width: $desktop) {
+      display: flex;
+      justify-content: space-between;
+      margin: auto;
+      max-width: 1200px;
+    }
   }
   .about {
     font-family: $primary-font;
 
     @media only screen and (min-width: $desktop) {
+      align-items: center;
       display: flex;
       justify-content: center;
     }
-    img {
+
+    .personal-photo {
       border: 1px dashed black;
-      border-radius: 150px;
-      margin-bottom: 30px;
-      width: 200px;
+      border-radius: 100%;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      transition: 1s all ease;
+      width: 300px;
+
+      &:hover {
+        transform: rotate(360deg);
+      }
+
+      @media only screen and (min-width: $desktop) {
+        margin-bottom: 0;
+      }
+
+      img {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: -10px;
+        width: 100%;
+      }
     }
 
     p {
+      font-family: $secondary-font;
       @media only screen and (min-width: $desktop) {
+        font-size: 20px;
         text-align: left;
-        margin-left: 20px;
+        margin-left: 30px;
         /* margin: auto; */
-        max-width: 300px;
+        max-width: 500px;
+      }
+
+      .txt-decoration {
+        font-family: $primary-font;
+        text-transform: uppercase;
+        text-decoration: underline;
       }
     }
   }
-}
 
-.about-me {
-  display: flex;
-  justify-content: center;
-  margin: $standard-margin;
-  text-align: center;
-
-  div {
-    border: 1px solid orange;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    min-height: 350px;
-    width: 100%;
-
-    &:first-child {
-      background: grey;
-      margin-right: 75px;
+  .lang-icons-section {
+    margin: auto 0;
+    p {
+      font-family: $primary-font;
+      margin-bottom: 20px;
+      text-decoration: underline;
     }
 
-    &:nth-child(2) {
-      background: oraange;
+    ul {
+      @media only screen and (min-width: $desktop) {
+        display: flex;
+      }
+
+      li {
+        list-style-type: none;
+        width: 80px;
+        span {
+          display: none;
+        }
+        img {
+          transition: 0.5s all ease;
+          width: 80px;
+
+          &:hover {
+            transform: scale(0.9);
+          }
+        }
+      }
     }
   }
 }

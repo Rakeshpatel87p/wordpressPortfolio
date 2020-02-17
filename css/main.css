@@ -23,7 +23,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 500px;
+  min-height: 600px;
   height: 100%;
 }
 
@@ -263,8 +263,22 @@ footer {
 }
 
 footer .wrapper {
-  padding: 30px 20px 50px;
+  margin: 50px 20px;
+  padding: 50px 20px 50px;
   text-align: center;
+}
+
+@media only screen and (min-width: 960px) {
+  footer .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: auto;
+    max-width: 1200px;
+  }
 }
 
 footer .about {
@@ -273,6 +287,9 @@ footer .about {
 
 @media only screen and (min-width: 960px) {
   footer .about {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -282,56 +299,92 @@ footer .about {
   }
 }
 
-footer .about img {
+footer .about .personal-photo {
   border: 1px dashed black;
-  border-radius: 150px;
-  margin-bottom: 30px;
-  width: 200px;
+  border-radius: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+  width: 300px;
+}
+
+footer .about .personal-photo:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+@media only screen and (min-width: 960px) {
+  footer .about .personal-photo {
+    margin-bottom: 0;
+  }
+}
+
+footer .about .personal-photo img {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -10px;
+  width: 100%;
+}
+
+footer .about p {
+  font-family: "Open Sans", sans-serif;
 }
 
 @media only screen and (min-width: 960px) {
   footer .about p {
+    font-size: 20px;
     text-align: left;
-    margin-left: 20px;
+    margin-left: 30px;
     /* margin: auto; */
-    max-width: 300px;
+    max-width: 500px;
   }
 }
 
-.about-me {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 50px 20px;
-  text-align: center;
+footer .about p .txt-decoration {
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
-.about-me div {
-  border: 1px solid orange;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: auto;
-  min-height: 350px;
-  width: 100%;
+footer .lang-icons-section {
+  margin: auto 0;
 }
 
-.about-me div:first-child {
-  background: grey;
-  margin-right: 75px;
+footer .lang-icons-section p {
+  font-family: "Work Sans", sans-serif;
+  margin-bottom: 20px;
+  text-decoration: underline;
 }
 
-.about-me div:nth-child(2) {
-  background: oraange;
+@media only screen and (min-width: 960px) {
+  footer .lang-icons-section ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+footer .lang-icons-section ul li {
+  list-style-type: none;
+  width: 80px;
+}
+
+footer .lang-icons-section ul li span {
+  display: none;
+}
+
+footer .lang-icons-section ul li img {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  width: 80px;
+}
+
+footer .lang-icons-section ul li img:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 /*# sourceMappingURL=main.css.map */
