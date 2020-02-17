@@ -104,6 +104,7 @@ header {
     padding: 0;
 
     @media only screen and (min-width: $desktop) {
+      align-items: center;
       border-left: 1px dashed black;
       border-bottom-left-radius: 15px;
       display: flex;
@@ -113,7 +114,6 @@ header {
   }
 
   li {
-    //border: 1px solid black;
     height: 100%;
     list-style-type: none;
     margin: 30px auto 0;
@@ -122,7 +122,7 @@ header {
     width: 100%;
 
     @media only screen and (min-width: $desktop) {
-      padding: 0 50px;
+      padding: 0 33px;
       width: 33%;
     }
 
@@ -133,7 +133,7 @@ header {
 
     img {
       transition: all 0.5s ease-in-out;
-      width: 150px;
+      width: 100%;
 
       &:hover {
         transform: scale(1.1);
@@ -223,11 +223,30 @@ footer {
   width: 100%;
 
   .wrapper {
-    margin: $standard-margin;
+    padding: 30px 20px 50px;
+    text-align: center;
   }
   .about {
+    font-family: $primary-font;
+
+    @media only screen and (min-width: $desktop) {
+      display: flex;
+      justify-content: center;
+    }
     img {
+      border: 1px dashed black;
+      border-radius: 150px;
+      margin-bottom: 30px;
       width: 200px;
+    }
+
+    p {
+      @media only screen and (min-width: $desktop) {
+        text-align: left;
+        margin-left: 20px;
+        /* margin: auto; */
+        max-width: 300px;
+      }
     }
   }
 }

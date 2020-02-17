@@ -109,6 +109,9 @@ header p {
 
 @media only screen and (min-width: 960px) {
   .skill-set ul {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-left: 1px dashed black;
     border-bottom-left-radius: 15px;
     display: -webkit-box;
@@ -132,7 +135,7 @@ header p {
 
 @media only screen and (min-width: 960px) {
   .skill-set li {
-    padding: 0 50px;
+    padding: 0 33px;
     width: 33%;
   }
 }
@@ -145,7 +148,7 @@ header p {
 .skill-set li img {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  width: 150px;
+  width: 100%;
 }
 
 .skill-set li img:hover {
@@ -260,11 +263,39 @@ footer {
 }
 
 footer .wrapper {
-  margin: 50px 20px;
+  padding: 30px 20px 50px;
+  text-align: center;
+}
+
+footer .about {
+  font-family: "Work Sans", sans-serif;
+}
+
+@media only screen and (min-width: 960px) {
+  footer .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 footer .about img {
+  border: 1px dashed black;
+  border-radius: 150px;
+  margin-bottom: 30px;
   width: 200px;
+}
+
+@media only screen and (min-width: 960px) {
+  footer .about p {
+    text-align: left;
+    margin-left: 20px;
+    /* margin: auto; */
+    max-width: 300px;
+  }
 }
 
 .about-me {
