@@ -314,11 +314,6 @@ footer {
       margin-bottom: 20px;
       text-decoration: underline;
       text-transform: uppercase;
-
-      @media only screen and (min-width: $desktop) {
-        margin-left: 11px;
-        text-align: left;
-      }
     }
 
     ul {
@@ -334,10 +329,25 @@ footer {
       li {
         list-style-type: none;
         margin: 0 10px 15px 0;
+        position: relative;
         width: 80px;
 
-        span {
-          display: none;
+        &:hover .tooltip {
+          visibility: visible;
+        }
+
+        .tooltip {
+          font-family: $secondary-font;
+          visibility: hidden;
+          width: 120px;
+          background-color: black;
+          color: #fff;
+          text-align: center;
+          padding: 5px 0;
+          border-radius: 6px;
+          position: absolute;
+          top: -28px;
+          z-index: 1;
         }
         img {
           transition: 0.5s all ease;

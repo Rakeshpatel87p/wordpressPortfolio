@@ -390,13 +390,6 @@ footer .lang-icons-section p {
   text-transform: uppercase;
 }
 
-@media only screen and (min-width: 960px) {
-  footer .lang-icons-section p {
-    margin-left: 11px;
-    text-align: left;
-  }
-}
-
 footer .lang-icons-section ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -421,11 +414,26 @@ footer .lang-icons-section ul {
 footer .lang-icons-section ul li {
   list-style-type: none;
   margin: 0 10px 15px 0;
+  position: relative;
   width: 80px;
 }
 
-footer .lang-icons-section ul li span {
-  display: none;
+footer .lang-icons-section ul li:hover .tooltip {
+  visibility: visible;
+}
+
+footer .lang-icons-section ul li .tooltip {
+  font-family: "Open Sans", sans-serif;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  top: -28px;
+  z-index: 1;
 }
 
 footer .lang-icons-section ul li img {
