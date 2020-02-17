@@ -23,7 +23,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 600px;
+  min-height: 620px;
   height: 100%;
 }
 
@@ -54,7 +54,6 @@ header p {
 
 .skill-set {
   background: beige;
-  padding: 50px 0;
 }
 
 @media only screen and (min-width: 960px) {

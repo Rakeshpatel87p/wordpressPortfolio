@@ -30,7 +30,7 @@ header {
   flex-direction: column;
   justify-content: center;
   //margin: auto;
-  min-height: 600px;
+  min-height: 620px;
   height: 100%;
   //text-align: center;
 
@@ -62,7 +62,6 @@ header {
 
 .skill-set {
   background: beige;
-  padding: 50px 0;
 
   .container {
     @media only screen and (min-width: $desktop) {
