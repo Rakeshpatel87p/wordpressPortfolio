@@ -7,6 +7,78 @@
 }
 
 header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  -webkit-box-shadow: 0 4px 2px -2px lightgrey;
+          box-shadow: 0 4px 2px -2px lightgrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0;
+  font-family: "Work Sans", sans-serif;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+header.display {
+  height: 65px;
+}
+
+header .title {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .title h2 {
+  font-size: 40px;
+  font-weight: 100;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+
+header .title h3 {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: -6px;
+}
+
+header .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .social-icons li {
+  list-style-type: none;
+  margin-right: 15px;
+}
+
+header .social-icons img {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  width: 40px;
+}
+
+header .social-icons img:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.hero {
   border-bottom: 1px solid white;
   -webkit-box-shadow: 5px 10px #888888;
           box-shadow: 5px 10px #888888;
@@ -27,31 +99,31 @@ header {
   height: 100%;
 }
 
-header .text {
+.hero .text {
   background: transparent;
   color: white;
   margin-left: 50px;
 }
 
 @media only screen and (min-width: 960px) {
-  header .text {
+  .hero .text {
     margin-left: 75px;
   }
 }
 
-header h1,
-header p {
+.hero h1,
+.hero p {
   background: transparent;
 }
 
-header h1 {
+.hero h1 {
   font-family: "Work Sans", sans-serif;
   font-size: 75px;
   font-weight: 100;
   text-transform: uppercase;
 }
 
-header p {
+.hero p {
   font-family: "Open Sans", sans-serif;
   font-size: 25px;
   margin-top: 10px;
@@ -89,6 +161,10 @@ header p {
   .skill-set h2 {
     margin: auto 45px auto 0;
   }
+}
+
+.skill-set h2 a {
+  text-decoration: none;
 }
 
 .skill-set h2 .underline--magical {
