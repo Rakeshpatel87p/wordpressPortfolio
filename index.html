@@ -220,19 +220,5 @@
       </div>
     </footer>
   </body>
-  <script src="js/float-panel.js"></script>
-  <script>
-    const topPosName = document
-      .querySelector(".hero .text")
-      .getBoundingClientRect().top;
-    const header = document.querySelector("header");
-
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset >= topPosName) {
-        header.classList.add("display");
-      } else {
-        header.classList.remove("display");
-      }
-    });
-  </script>
+  <script src="js/uiEffects.js"></script>
 </html>

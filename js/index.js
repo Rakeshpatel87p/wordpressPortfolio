@@ -1,1 +1,0 @@
-new Glide(".glide").mount();
