@@ -45,7 +45,11 @@ header {
   }
 
   &.display {
-    height: 65px;
+    height: 105px;
+
+    @include breakpoint($desktop) {
+      height: 65px;
+    }
   }
 
   .title {
@@ -67,6 +71,13 @@ header {
 
   .social-icons {
     display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    @include breakpoint($desktop) {
+      justify-content: flex-start;
+      margin: 0;
+    }
     li {
       list-style-type: none;
       margin-right: 15px;

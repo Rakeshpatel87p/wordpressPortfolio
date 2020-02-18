@@ -38,7 +38,13 @@ header {
 }
 
 header.display {
-  height: 65px;
+  height: 105px;
+}
+
+@media only screen and (min-width: 960px) {
+  header.display {
+    height: 65px;
+  }
 }
 
 header .title {
@@ -66,6 +72,19 @@ header .social-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 960px) {
+  header .social-icons {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 0;
+  }
 }
 
 header .social-icons li {
