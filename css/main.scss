@@ -17,11 +17,14 @@ $desktop: 960px;
 }
 
 * {
-  //background: purple;
-  color: black;
+  //color: white;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+  background: white;
 }
 
 header {
@@ -96,20 +99,20 @@ header {
 }
 
 .hero {
-  //background: url("../img/keyboardLight.jpg");
-  //background-color: #d07c7c;
-  border-bottom: 1px solid white;
+  background: url("../img/fountainBckgrd.jpg");
   box-shadow: 5px 10px #888888;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  //margin: auto;
-  min-height: 620px;
+  min-height: 500px;
   height: 100%;
-  //text-align: center;
+
+  @include breakpoint($desktop) {
+    height: 1000px;
+  }
 
   .text {
     background: transparent;
@@ -142,7 +145,8 @@ header {
 }
 
 .skill-set {
-  background: beige;
+  //background: white;
+  color: black;
 
   .container {
     padding: 50px;
@@ -282,7 +286,7 @@ header {
 
     .wrapper {
       align-items: center;
-      background: beige;
+      background: #12619f;
       border-bottom: 2px dashed grey;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
@@ -306,7 +310,7 @@ header {
 }
 
 footer {
-  background: beige;
+  //background: #12619f;
   height: 100%;
   width: 100%;
 
