@@ -1,0 +1,23 @@
+{
+  "name": "updatedportfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss/main.scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rakeshpatel87p/wordpressPortfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rakeshpatel87p/wordpressPortfolio/issues"
+  },
+  "homepage": "https://github.com/Rakeshpatel87p/wordpressPortfolio#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

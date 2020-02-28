@@ -1,0 +1,94 @@
+.skill-set {
+  //background: white;
+  color: black;
+
+  .container {
+    padding: 50px;
+    @include breakpoint($desktop) {
+      display: flex;
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+  }
+
+  h2 {
+    @include section-headers();
+    font-size: 40px;
+    text-decoration: none;
+
+    @include breakpoint($desktop) {
+      margin: auto 45px auto 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .underline--magical {
+      background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 0.2em;
+      background-position: 0 105%;
+      transition: background-size 0.25s ease-in;
+
+      &:hover {
+        background-size: 100% 88%;
+        color: blue;
+      }
+    }
+  }
+
+  ul {
+    align-items: stretch;
+    font-family: $secondary-font;
+    margin: 0 auto;
+    max-width: 1250px;
+    padding: 0;
+
+    @include breakpoint($desktop) {
+      align-items: center;
+      border-left: 1px dashed black;
+      border-bottom-left-radius: 15px;
+      display: flex;
+      justify-content: space-around;
+      flex-basis: 1;
+    }
+  }
+
+  li {
+    height: 100%;
+    list-style-type: none;
+    margin: 30px auto 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    @include breakpoint($desktop) {
+      padding: 0 33px;
+      width: 33%;
+    }
+
+    div {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      transition: all 0.5s ease-in-out;
+      width: 50%;
+
+      @include breakpoint($desktop) {
+        width: 100%;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    p {
+      margin-top: 10px;
+      //position: absolute;
+    }
+  }
+}

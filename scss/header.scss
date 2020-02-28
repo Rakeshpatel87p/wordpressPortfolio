@@ -1,0 +1,70 @@
+header {
+  align-items: center;
+  background: white;
+  box-shadow: 0 4px 2px -2px lightgrey;
+  display: block;
+  height: 0;
+  font-family: $secondary-font;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  transition: 0.5s all ease;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+
+  @include breakpoint($desktop) {
+    display: flex;
+  }
+
+  &.display {
+    height: 105px;
+
+    @include breakpoint($desktop) {
+      height: 65px;
+    }
+  }
+
+  .title {
+    align-items: center;
+    display: flex;
+
+    h2 {
+      font-size: 40px;
+      font-weight: 100;
+      margin-right: 10px;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-family: $secondary-font;
+      margin-bottom: -6px;
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    @include breakpoint($desktop) {
+      justify-content: flex-start;
+      margin: 0;
+    }
+    li {
+      list-style-type: none;
+      margin-right: 15px;
+    }
+
+    img {
+      transition: 0.5s all ease;
+      width: 40px;
+
+      &:hover {
+        //box-shadow: 0 2px 16px #c4c4c7;
+        transform: scale(0.9);
+      }
+    }
+  }
+}

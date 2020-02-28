@@ -1,0 +1,40 @@
+.hero {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+
+  @include breakpoint($desktop) {
+    height: 1000px;
+  }
+
+  .text {
+    align-items: center;
+    background: transparent;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+  }
+
+  h1,
+  p {
+    background: transparent;
+  }
+
+  h1 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 75px;
+    font-weight: 100;
+  }
+
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+}
