@@ -63,6 +63,14 @@ body {
       margin: 30px 0;
       padding: 0 20px; }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: white; }
+
 footer {
   height: 100%;
   width: 100%; }
@@ -166,6 +174,14 @@ footer {
           footer .lang-icons-section ul li img:hover {
             transform: scale(0.9); }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: white; }
+
 header {
   align-items: center;
   background: white;
@@ -217,6 +233,14 @@ header {
       header .social-icons img:hover {
         transform: scale(0.9); }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: white; }
+
 .hero {
   background-color: black;
   display: flex;
@@ -247,6 +271,14 @@ header {
     font-size: 25px;
     margin-top: 10px;
     text-transform: uppercase; }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: white; }
 
 .skill-set {
   color: black; }
