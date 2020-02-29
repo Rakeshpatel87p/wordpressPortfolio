@@ -251,7 +251,7 @@ body {
     .hero {
       height: 1000px; } }
   .hero .text {
-    align-items: center;
+    align-items: center !important;
     background: transparent;
     color: white;
     display: flex;
