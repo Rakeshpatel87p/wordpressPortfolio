@@ -22,14 +22,7 @@ function lintSass() {
         configFile: "scss/.sasslintrc"
       })
     )
-    .on("error", swallowError)
     .pipe(sassLint.format());
-}
-
-function swallowError(error) {
-  log.info("Error encountered");
-  log.error(error);
-  this.emit("end");
 }
 
 function css() {

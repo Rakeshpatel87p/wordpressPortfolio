@@ -1,7 +1,7 @@
 {
   "options": {
     "merge-default-rules": false,
-    "formatter": "html",
+    "formatter": "stylish",
     "max-warnings": 50
   },
   "files": {
