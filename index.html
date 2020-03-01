@@ -73,8 +73,14 @@
   </section>
   <section class="clients-served">
     <h2>Portfolio</h2>
-    <ul>
-      <li>
+    <div class="controls">
+      <button type="button" data-filter=".all">All<button></button>
+        <button type="button" data-filter=".web-design">Pixel Perfect<button>
+            <button type="button" data-filter=".react">React<button>
+                <button type="button" data-filter=".javascript">Javascript<button>
+    </div>
+    <ul class="mixitup-container">
+      <li class="mix all web-design">
         <a href="">
           <div class="wrapper">
             <img src="img/coLogos/cfa.png" alt="Chick-fil-A Logo" />
@@ -86,7 +92,7 @@
           </p>
         </a>
       </li>
-      <li>
+      <li class="mix all web-design">
         <a href="">
           <div class="wrapper">
             <img src="img/coLogos/schwinn.png" alt="Schwinn Logo" />
@@ -98,7 +104,7 @@
           </p>
         </a>
       </li>
-      <li>
+      <li class="mix all web-design">
         <a href="">
           <div class="wrapper">
             <img src="img/coLogos/hfe.png" alt="HFE Logo" />
@@ -110,7 +116,7 @@
           </p>
         </a>
       </li>
-      <li>
+      <li class="mix all javascript">
         <a href="">
           <div class="wrapper">
             <img src="img/coLogos/cox_media.png" alt="Cox Media Logo" />
@@ -122,9 +128,9 @@
           </p>
         </a>
       </li>
-      <li>
+      <li class="mix all react">
         <a href="">
-          <div class="wrapper">
+          <div class="wrapper react">
             <p>Mockup of Online Store</p>
           </div>
           <p>
@@ -133,7 +139,7 @@
           </p>
         </a>
       </li>
-      <li>
+      <li class="mix all react">
         <a href="">
           <div class="wrapper">
             <p>Timer App</p>
@@ -144,7 +150,7 @@
           </p>
         </a>
       </li>
-      <li>
+      <li class="mix all react">
         <a href="">
           <div class="wrapper">
             <p>Would You Rather Game</p>
@@ -210,5 +216,7 @@
 </body>
 <script src="js/uiEffects.js"></script>
 <script src="js/color-circle.js"></script>
+<script src="js/mixitup_plugin.js"></script>
+<script src="js/mixitup.js"></script>
 
 </html>
