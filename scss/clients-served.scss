@@ -7,7 +7,7 @@
     @include section-headers();
     margin-bottom: 40px;
   }
-  ul {
+  div {
     display: flex;
     font-family: $secondary-font;
     flex-wrap: wrap;
@@ -18,14 +18,13 @@
     width: 100%;
   }
 
-  li {
+  .card {
     border: 1px solid grey;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     list-style-type: none;
     margin-bottom: 40px;
     text-align: left;
-    transition: 0.5s all ease;
     width: 100%;
     overflow: hidden;
 

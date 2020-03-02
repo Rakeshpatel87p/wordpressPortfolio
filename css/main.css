@@ -14,7 +14,7 @@ body {
     text-align: center;
     text-decoration: underline;
     margin-bottom: 40px; }
-  .clients-served ul {
+  .clients-served div {
     display: flex;
     font-family: "Open Sans", sans-serif;
     flex-wrap: wrap;
@@ -23,28 +23,27 @@ body {
     padding: 0;
     text-align: center;
     width: 100%; }
-  .clients-served li {
+  .clients-served .card {
     border: 1px solid grey;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     list-style-type: none;
     margin-bottom: 40px;
     text-align: left;
-    transition: 0.5s all ease;
     width: 100%;
     overflow: hidden; }
     @media only screen and (min-width: 960px) {
-      .clients-served li {
+      .clients-served .card {
         display: flex;
         flex-direction: column;
         margin: 0 15px 15px 0;
         width: 30%; } }
-    .clients-served li:hover {
+    .clients-served .card:hover {
       box-shadow: 0 2px 16px #c4c4c7;
       transform: translateY(-12px); }
-    .clients-served li a {
+    .clients-served .card a {
       text-decoration: none; }
-    .clients-served li .wrapper {
+    .clients-served .card .wrapper {
       align-items: center;
       background: #12619f;
       border-bottom: 2px dashed grey;
@@ -55,11 +54,11 @@ body {
       justify-content: center;
       padding: 50px 5px;
       text-align: center; }
-    .clients-served li img {
+    .clients-served .card img {
       background: transparent;
       margin: 0 auto;
       width: 150px; }
-    .clients-served li p {
+    .clients-served .card p {
       margin: 30px 0;
       padding: 0 20px; }
 
