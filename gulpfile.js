@@ -39,7 +39,12 @@ function css() {
 exports.lintSass = lintSass;
 
 exports.default = function() {
-  watch("scss/*.scss", lintSass, css);
+  watch("scss/*.scss", cb => {
+    lintSass();
+    css();
+    cb();
+  });
+  css();
   liveServer();
   parallel(css);
 };
