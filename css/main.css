@@ -38,11 +38,9 @@ body {
         flex-direction: column;
         margin: 0 15px 15px 0;
         width: 30%; } }
-    .clients-served .card:hover {
-      box-shadow: 0 2px 16px #c4c4c7;
-      transform: translateY(-12px); }
     .clients-served .card a {
-      text-decoration: none; }
+      text-decoration: none;
+      color: blue; }
     .clients-served .card .wrapper {
       align-items: center;
       background: #12619f;
@@ -250,7 +248,7 @@ body {
     .hero {
       height: 1000px; } }
   .hero .text {
-    align-items: center !important;
+    align-items: center;
     background: transparent;
     color: white;
     display: flex;
