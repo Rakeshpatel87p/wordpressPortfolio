@@ -7,6 +7,34 @@
     @include section-headers();
     margin-bottom: 40px;
   }
+
+  .controls {
+    margin-bottom: 20px;
+    position: relative;
+
+    button {
+      font-family: $secondary-font;
+      border: 0;
+      font-size: 25px;
+      padding: 10px;
+      outline: 0;
+      width: 150px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .slider {
+      background: yellow;
+      border: 1px solid black;
+      height: 55px;
+      position: absolute;
+      transition: 0.3s all ease-in;
+      width: 150px;
+    }
+  }
+
   div {
     display: flex;
     font-family: $secondary-font;
