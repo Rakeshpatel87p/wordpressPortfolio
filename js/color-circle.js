@@ -89,7 +89,7 @@ function ob(x, y, r, cc, o, s) {
     this.y = m.y + Math.sin(this.theta) * this.t;
     c.beginPath();
     c.lineWidth = this.r;
-    c.strokeStyle = "#FFF";
+    c.strokeStyle = "#E31B6D";
     c.moveTo(ls.x, ls.y);
     c.lineTo(this.x, this.y);
     c.stroke();
