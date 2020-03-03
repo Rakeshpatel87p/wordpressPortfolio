@@ -1,3 +1,36 @@
+// function ob(x, y, r, cc, o, s, m, c) {
+//   this.x = x;
+//   console.log(this.x);
+//   this.y = y;
+//   this.r = r;
+//   this.cc = cc;
+//   this.theta = Math.random() * Math.PI * 5;
+//   this.s = s;
+//   this.o = 1000;
+//   this.t = Math.random() * 1500;
+
+//   this.o = o;
+//   this.dr = function(c) {
+//     const ls = {
+//       x: this.x,
+//       y: this.y
+//     };
+//     this.theta += this.s;
+//     //this.x = m.x + Math.cos(this.theta) * this.t;
+//     this.x = 500;
+//     this.y = 500;
+//     //this.y = m.y + Math.sin(this.theta) * this.t;
+//     console.log(c);
+//     c.beginPath();
+//     c.lineWidth = this.r;
+//     c.strokeStyle = "#FFF";
+//     c.moveTo(ls.x, ls.y);
+//     c.lineTo(this.x, this.y);
+//     c.stroke();
+//     c.closePath();
+//   };
+// }
+
 // class RevolvingCicle {
 //   constructor() {
 //     this.cn = document.getElementById("cw");
@@ -26,13 +59,15 @@
 //       const r = 30;
 //       const x = Math.random() * (innerWidth - 1 * r) + r;
 //       const y = Math.random() * (innerHeight - 1 * r) + r;
-//       const t = this.ob(
+//       const t = new ob(
 //         innerWidth / 2,
 //         innerHeight / 2,
 //         2,
 //         "red",
 //         Math.random() * 200 + 20,
-//         2
+//         2,
+//         this.m,
+//         this.cn
 //       );
 
 //       this.a.push(t);
@@ -57,7 +92,7 @@
 //       const r = 30;
 //       const x = Math.random() * (innerWidth - 2 * r) + r;
 //       const y = Math.random() * (innerHeight - 2 * r) + r;
-//       this.a[i] = this.ob(
+//       this.a[i] = new ob(
 //         innerWidth / 2,
 //         innerHeight / 2,
 //         4,
@@ -70,35 +105,33 @@
 //     //a[0].dr();
 //   }
 
-//   ob(x, y, r, cc, o, s) {
-//     return new Object(
-//         this.x: x,
-//         this.y = y;
-//         this.r = r;
-//         this.cc = cc;
-//         this.theta = Math.random() * Math.PI * 5;
-//         this.s = s;
-//         this.o = 1000;
-//         this.t = Math.random() * 1500;
-//         this.o = o;
-//         this.dr = function() {
-//           const ls = {
-//             x: this.x,
-//             y: this.y
-//           };
-//           this.theta += this.s;
-//           this.x = m.x + Math.cos(this.theta) * this.t;
-//           this.y = m.y + Math.sin(this.theta) * this.t;
-//           c.beginPath();
-//           c.lineWidth = this.r;
-//           c.strokeStyle = "#FFF";
-//           c.moveTo(ls.x, ls.y);
-//           c.lineTo(this.x, this.y);
-//           c.stroke();
-//           c.closePath();
-//         };
-//     )
+//   ob(x, y, r, cc, o, s, m) {
+//     this.x = x;
+//     this.y = y;
+//     this.r = r;
+//     this.cc = cc;
+//     this.theta = Math.random() * Math.PI * 5;
+//     this.s = s;
+//     this.o = 1000;
+//     this.t = Math.random() * 1500;
 
+//     this.o = o;
+//     this.dr = function() {
+//       const ls = {
+//         x: this.x,
+//         y: this.y
+//       };
+//       this.theta += this.s;
+//       this.x = m.x + Math.cos(this.theta) * this.t;
+//       this.y = m.y + Math.sin(this.theta) * this.t;
+//       c.beginPath();
+//       c.lineWidth = this.r;
+//       c.strokeStyle = "#FFF";
+//       c.moveTo(ls.x, ls.y);
+//       c.lineTo(this.x, this.y);
+//       c.stroke();
+//       c.closePath();
+//     };
 //   }
 
 //   anim() {
@@ -111,4 +144,4 @@
 //   }
 // }
 
-// new RevolvingCicle();
+// //new RevolvingCicle();
