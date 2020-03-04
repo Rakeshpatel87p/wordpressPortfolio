@@ -17,22 +17,25 @@ body {
   .clients-served .controls {
     margin-bottom: 20px;
     position: relative; }
+    .clients-served .controls .slider {
+      border: 1px solid black;
+      height: 55px;
+      position: absolute;
+      transition: 0.3s all ease-in;
+      width: 150px; }
     .clients-served .controls button {
       font-family: "Open Sans", sans-serif;
       border: 0;
       font-size: 25px;
       padding: 10px;
       outline: 0;
+      transition: 1s background ease;
       width: 150px; }
       .clients-served .controls button:hover {
         cursor: pointer; }
-    .clients-served .controls .slider {
-      background: yellow;
-      border: 1px solid black;
-      height: 55px;
-      position: absolute;
-      transition: 0.3s all ease-in;
-      width: 150px; }
+      .clients-served .controls button.selected {
+        background: #E31B6D;
+        color: white; }
   .clients-served div {
     display: flex;
     font-family: "Open Sans", sans-serif;

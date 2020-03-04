@@ -21,13 +21,15 @@ function headerNavDisplay() {
 class PillSlider {
   constructor() {
     this.slider = document.querySelector(".slider");
+    this.defaultBtn = document.querySelector(".controls button");
+    this.prevToggleBtn;
     this.defaultSliderPos();
     this.addClickEvents();
   }
 
   defaultSliderPos() {
-    const defaultBtn = document.querySelector(".controls button");
-    const leftPos = defaultBtn.offsetLeft;
+    //const defaultBtn = document.querySelector(".controls button");
+    const leftPos = this.defaultBtn.offsetLeft;
     this.moveSlider(leftPos);
   }
 
@@ -36,11 +38,20 @@ class PillSlider {
       btn.addEventListener("click", () => {
         const leftPos = btn.offsetLeft;
         this.moveSlider(leftPos);
+        this.toggleSelected(btn);
       });
     });
   }
 
   moveSlider(pos) {
     this.slider.style.left = `${pos}px`;
+  }
+
+  toggleSelected(btn) {
+    this.prevToggleBtn
+      ? this.prevToggleBtn.classList.remove("selected")
+      : this.defaultBtn.classList.remove("selected");
+    btn.classList.add("selected");
+    this.prevToggleBtn = btn;
   }
 }
