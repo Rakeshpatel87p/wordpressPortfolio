@@ -3,6 +3,8 @@ $secondary-font: "Open Sans", sans-serif;
 $standard-margin: 50px 20px;
 $desktop: 960px;
 
+$main-pink:#E31B6D;
+
 @mixin section-headers {
   font-family: $primary-font;
   font-weight: 400;

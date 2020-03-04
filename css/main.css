@@ -279,14 +279,27 @@ body {
   .hero p {
     background: transparent; }
   .hero h1 {
+    border-bottom: 3px solid white;
     font-family: "Work Sans", sans-serif;
     font-size: 75px;
     font-weight: 100; }
   .hero p {
     font-family: "Open Sans", sans-serif;
-    font-size: 25px;
-    margin-top: 10px;
+    font-size: 55px;
+    margin: 15px;
     text-transform: uppercase; }
+  .hero button {
+    background: black;
+    color: white;
+    font-size: 20px;
+    margin-top: 25px;
+    outline: 0;
+    padding: 20px;
+    transition: 0.3s all ease-out; }
+    .hero button:hover {
+      color: #E31B6D;
+      transform: scale(1.1);
+      cursor: pointer; }
 
 * {
   box-sizing: border-box;
