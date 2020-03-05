@@ -1,7 +1,9 @@
 @import "_utils";
 
 .clients-served {
-  margin: $standard-margin;
+  background: black;
+  color: white;
+  padding: $standard-margin;
 
   h2 {
     @include section-headers();
@@ -9,7 +11,7 @@
   }
 
   .controls {
-    margin-bottom: 20px;
+    margin-bottom: 45px;
     position: relative;
 
     .slider {
@@ -21,8 +23,10 @@
     }
 
     button {
-      font-family: $secondary-font;
+      background: black;
       border: 0;
+      color: white;
+      font-family: $secondary-font;
       font-size: 25px;
       padding: 10px;
       outline: 0;
@@ -52,9 +56,6 @@
   }
 
   .card {
-    border: 1px solid grey;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
     list-style-type: none;
     margin-bottom: 40px;
     text-align: left;
@@ -75,23 +76,20 @@
 
     .wrapper {
       align-items: center;
-      background: #12619f;
-      border-bottom: 2px dashed grey;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
       display: flex;
-      height: 150px;
+      height: 250px;
       justify-content: center;
-      padding: 50px 5px;
       text-align: center;
     }
 
     img {
-      background: transparent;
-      margin: 0 auto;
-      width: 150px;
+      display: none;
     }
     p {
+      display: none;
       margin: 30px 0;
       padding: 0 20px;
     }

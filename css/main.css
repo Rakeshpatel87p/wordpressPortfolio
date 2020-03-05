@@ -7,7 +7,9 @@ body {
   background: white; }
 
 .clients-served {
-  margin: 50px 20px; }
+  background: black;
+  color: white;
+  padding: 50px 20px; }
   .clients-served h2 {
     font-family: "Work Sans", sans-serif;
     font-weight: 400;
@@ -15,7 +17,7 @@ body {
     text-decoration: underline;
     margin-bottom: 40px; }
   .clients-served .controls {
-    margin-bottom: 20px;
+    margin-bottom: 45px;
     position: relative; }
     .clients-served .controls .slider {
       border: 1px solid black;
@@ -24,8 +26,10 @@ body {
       transition: 0.3s all ease-in;
       width: 150px; }
     .clients-served .controls button {
-      font-family: "Open Sans", sans-serif;
+      background: black;
       border: 0;
+      color: white;
+      font-family: "Open Sans", sans-serif;
       font-size: 25px;
       padding: 10px;
       outline: 0;
@@ -46,9 +50,6 @@ body {
     text-align: center;
     width: 100%; }
   .clients-served .card {
-    border: 1px solid grey;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
     list-style-type: none;
     margin-bottom: 40px;
     text-align: left;
@@ -65,20 +66,17 @@ body {
       color: blue; }
     .clients-served .card .wrapper {
       align-items: center;
-      background: #12619f;
-      border-bottom: 2px dashed grey;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
       display: flex;
-      height: 150px;
+      height: 250px;
       justify-content: center;
-      padding: 50px 5px;
       text-align: center; }
     .clients-served .card img {
-      background: transparent;
-      margin: 0 auto;
-      width: 150px; }
+      display: none; }
     .clients-served .card p {
+      display: none;
       margin: 30px 0;
       padding: 0 20px; }
 
@@ -380,3 +378,54 @@ body {
         transform: scale(1.1); }
     .skill-set li p {
       margin-top: 10px; }
+  .skill-set .wrapper {
+    margin: 50px 20px;
+    padding: 50px 20px 50px;
+    text-align: center; }
+    @media only screen and (min-width: 960px) {
+      .skill-set .wrapper {
+        display: flex;
+        margin: auto;
+        max-width: 1350px; } }
+  .skill-set .about {
+    font-family: "Work Sans", sans-serif; }
+    @media only screen and (min-width: 960px) {
+      .skill-set .about {
+        align-items: center;
+        padding-right: 20px; } }
+    .skill-set .about .personal-photo {
+      border: 1px dashed black;
+      border-bottom: 2px solid black;
+      border-right: 5px solid black;
+      border-radius: 50px;
+      height: 300px;
+      margin: auto auto 20px;
+      overflow: hidden;
+      position: relative;
+      transition: 1s all ease;
+      width: 300px; }
+      @media only screen and (min-width: 960px) {
+        .skill-set .about .personal-photo {
+          margin-bottom: 0; } }
+      .skill-set .about .personal-photo img {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: -5px;
+        width: 100%; }
+    .skill-set .about p {
+      font-family: "Open Sans", sans-serif; }
+      @media only screen and (min-width: 960px) {
+        .skill-set .about p {
+          font-size: 15px;
+          margin: 25px 0 0 30px;
+          max-width: 500px;
+          text-align: center; } }
+      .skill-set .about p .txt-decoration {
+        font-family: "Work Sans", sans-serif;
+        text-transform: uppercase;
+        text-decoration: underline; }
+  .skill-set .tech-skills {
+    border: 1px solid black;
+    width: 50%; }
