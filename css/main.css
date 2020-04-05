@@ -16,30 +16,6 @@ body {
     text-align: center;
     text-decoration: underline;
     margin-bottom: 40px; }
-  .clients-served .controls {
-    margin-bottom: 45px;
-    position: relative; }
-    .clients-served .controls .slider {
-      border: 1px solid black;
-      height: 55px;
-      position: absolute;
-      transition: 0.3s all ease-in;
-      width: 150px; }
-    .clients-served .controls button {
-      background: black;
-      border: 0;
-      color: white;
-      font-family: "Open Sans", sans-serif;
-      font-size: 25px;
-      padding: 10px;
-      outline: 0;
-      transition: 1s background ease;
-      width: 150px; }
-      .clients-served .controls button:hover {
-        cursor: pointer; }
-      .clients-served .controls button.selected {
-        background: #E31B6D;
-        color: white; }
   .clients-served div {
     display: flex;
     font-family: "Open Sans", sans-serif;
@@ -80,20 +56,6 @@ body {
       opacity: 1;
       text-align: center;
       transition: 0.3s all ease-in; }
-      .clients-served .card .wrapper.cfa {
-        background-image: url("../img/portfolio/cfaImg.jpg"); }
-      .clients-served .card .wrapper.schwinn {
-        background-image: url("../img/portfolio/schwinn.jpg"); }
-      .clients-served .card .wrapper.hfe {
-        background-image: url("../img/portfolio/hfe.jpg"); }
-      .clients-served .card .wrapper.coxMedia {
-        background-image: url("../img/portfolio/coxMedia.jpg"); }
-      .clients-served .card .wrapper.onlineStore {
-        background-image: url("../img/portfolio/onlineStore.jpg"); }
-      .clients-served .card .wrapper.prodApp {
-        background-image: url("../img/portfolio/productivityApp.jpg"); }
-      .clients-served .card .wrapper.game {
-        background-image: url("../img/portfolio/game.jpg"); }
     .clients-served .card p {
       background: white;
       color: black;
