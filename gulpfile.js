@@ -10,7 +10,7 @@ function liveServer() {
     server({
       livereload: true,
       open: true,
-      port: 5000
+      port: 5000,
     })
   );
 }
@@ -19,7 +19,7 @@ function lintSass() {
   return src("scss/*.scss")
     .pipe(
       sassLint({
-        configFile: "scss/.sasslintrc"
+        configFile: "scss/.sasslintrc",
       })
     )
     .pipe(sassLint.format());
@@ -29,7 +29,7 @@ function css() {
   return src("scss/*.scss")
     .pipe(
       sass({
-        errLogToConsole: true
+        errLogToConsole: true,
       })
     )
     .pipe(concat("main.css"))
@@ -38,8 +38,8 @@ function css() {
 
 exports.lintSass = lintSass;
 
-exports.default = function() {
-  watch("scss/*.scss", cb => {
+exports.default = function () {
+  watch("scss/*.scss", (cb) => {
     lintSass();
     css();
     cb();
