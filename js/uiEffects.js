@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
-  headerNavDisplay();
-  new PillSlider();
+  //headerNavDisplay();
+  //new PillSlider();
 });
 
 function headerNavDisplay() {
@@ -34,7 +34,7 @@ class PillSlider {
   }
 
   addClickEvents() {
-    document.querySelectorAll(".controls button").forEach(btn => {
+    document.querySelectorAll(".controls button").forEach((btn) => {
       btn.addEventListener("click", () => {
         const leftPos = btn.offsetLeft;
         this.moveSlider(leftPos);
@@ -55,3 +55,27 @@ class PillSlider {
     this.prevToggleBtn = btn;
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var lazyBackgrounds = [].slice.call(
+    document.querySelectorAll(".lazy-background")
+  );
+
+  if ("IntersectionObserver" in window) {
+    let lazyBackgroundObserver = new IntersectionObserver(function (
+      entries,
+      observer
+    ) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          lazyBackgroundObserver.unobserve(entry.target);
+        }
+      });
+    });
+
+    lazyBackgrounds.forEach(function (lazyBackground) {
+      lazyBackgroundObserver.observe(lazyBackground);
+    });
+  }
+});
