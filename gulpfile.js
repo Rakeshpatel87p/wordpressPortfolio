@@ -1,5 +1,6 @@
 const { src, dest, parallel, watch } = require("gulp");
 const server = require("gulp-webserver");
+const nunjucksRender = require("gulp-nunjucks-render");
 const sass = require("gulp-sass");
 const sassLint = require("gulp-sass-lint");
 const concat = require("gulp-concat");
@@ -13,6 +14,16 @@ function liveServer() {
       port: 5000,
     })
   );
+}
+
+function nunjucks() {
+  return src("pages/*.+(html|njk)")
+    .pipe(
+      nunjucksRender({
+        path: ["templates"],
+      })
+    )
+    .pipe(dest("."));
 }
 
 function lintSass() {
@@ -37,6 +48,7 @@ function css() {
 }
 
 exports.lintSass = lintSass;
+exports.nunjucks = nunjucks;
 
 exports.default = function () {
   watch("scss/*.scss", (cb) => {
@@ -44,6 +56,12 @@ exports.default = function () {
     css();
     cb();
   });
+  watch("templates/*.+(html|njk)", (cb) => {
+    nunjucks();
+    cb();
+  });
+  nunjucks();
+  lintSass();
   css();
   liveServer();
   parallel(css);
