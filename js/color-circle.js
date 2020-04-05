@@ -4,7 +4,7 @@ var c;
 var u = 10;
 var m = {
   x: innerWidth / 2,
-  y: innerHeight / 2
+  y: innerHeight / 2,
 };
 
 function gc() {
@@ -41,10 +41,17 @@ window.onload = function myfunction() {
   c.lineWidth = 0.5;
   c.globalAlpha = 0.5;
   resize();
-  anim();
+
+  // window.addEventListener("scroll", () => {
+  //   if (window.pageYOffset > document.querySelector(".hero").offsetHeight) {
+  //     window.cancelAnimationFrame();
+  //     return;
+  //   }
+  //   anim();
+  // });
 };
 
-window.onresize = function() {
+window.onresize = function () {
   resize();
 };
 
@@ -79,10 +86,10 @@ function ob(x, y, r, cc, o, s) {
   this.t = Math.random() * 1500;
 
   this.o = o;
-  this.dr = function() {
+  this.dr = function () {
     const ls = {
       x: this.x,
-      y: this.y
+      y: this.y,
     };
     this.theta += this.s;
     this.x = m.x + Math.cos(this.theta) * this.t;
@@ -101,7 +108,9 @@ function anim() {
   requestAnimationFrame(anim);
   c.fillStyle = "rgba(0,0,0,0.05)";
   c.fillRect(0, 0, cn.width, cn.height);
-  a.forEach(function(e, i) {
+  a.forEach(function (e, i) {
     e.dr();
   });
 }
+
+//anim();
