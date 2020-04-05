@@ -10,40 +10,6 @@
     margin-bottom: 40px;
   }
 
-  .controls {
-    margin-bottom: 45px;
-    position: relative;
-
-    .slider {
-      border: 1px solid black;
-      height: 55px;
-      position: absolute;
-      transition: 0.3s all ease-in;
-      width: 150px;
-    }
-
-    button {
-      background: black;
-      border: 0;
-      color: white;
-      font-family: $secondary-font;
-      font-size: 25px;
-      padding: 10px;
-      outline: 0;
-      transition: 1s background ease;
-      width: 150px;
-
-      &:hover {
-        cursor: pointer;
-      }
-
-      &.selected {
-        background: $main-pink;
-        color: white;
-      }
-    }
-  }
-
   div {
     display: flex;
     font-family: $secondary-font;
@@ -96,33 +62,33 @@
       text-align: center;
       transition: 0.3s all ease-in;
 
-      &.cfa {
-        background-image: url("../img/portfolio/cfaImg.jpg");
-      }
+      // &.cfa {
+      //   background-image: url("../img/portfolio/cfaImg.jpg");
+      // }
 
-      &.schwinn {
-        background-image: url("../img/portfolio/schwinn.jpg");
-      }
+      // &.schwinn {
+      //   background-image: url("../img/portfolio/schwinn.jpg");
+      // }
 
-      &.hfe {
-        background-image: url("../img/portfolio/hfe.jpg");
-      }
+      // &.hfe {
+      //   background-image: url("../img/portfolio/hfe.jpg");
+      // }
 
-      &.coxMedia {
-        background-image: url("../img/portfolio/coxMedia.jpg");
-      }
+      // &.coxMedia {
+      //   background-image: url("../img/portfolio/coxMedia.jpg");
+      // }
 
-      &.onlineStore {
-        background-image: url("../img/portfolio/onlineStore.jpg");
-      }
+      // &.onlineStore {
+      //   background-image: url("../img/portfolio/onlineStore.jpg");
+      // }
 
-      &.prodApp {
-        background-image: url("../img/portfolio/productivityApp.jpg");
-      }
+      // &.prodApp {
+      //   background-image: url("../img/portfolio/productivityApp.jpg");
+      // }
 
-      &.game {
-        background-image: url("../img/portfolio/game.jpg");
-      }
+      // &.game {
+      //   background-image: url("../img/portfolio/game.jpg");
+      // }
     }
 
     p {
