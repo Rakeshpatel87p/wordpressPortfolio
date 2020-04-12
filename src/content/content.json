@@ -1,31 +1,29 @@
 {
-  "clientsServed": [
+  "projects": [
     {
-      "clientName": "Chick-fil-A",
+      "name": "Chick-fil-A",
       "abrev": "cfa",
-      "workDescription": "2 years of agile development. Work closely with Designers and Backend developers to create new features. Helped upgrade codebase to be ES6 and Typescript as well as upgraded JQuery to v3.",
+      "description": "2 years of agile development. Work closely with Designers and Backend developers to create new features. Helped upgrade codebase to be ES6 and Typescript as well as upgraded JQuery to v3.",
       "img": "img/portfolio/cfaImg.jpg"
     },
     {
-      "clientName": "Schwinn",
+      "name": "Schwinn",
       "abrev": "schwinn",
-      "workDescription": "Worked under Senior Developer to deliver a pixel-perfect redesign of the website. Created reusable UI components including Product Card and Instagram feature.",
+      "description": "Worked under Senior Developer to deliver a pixel-perfect redesign of the website. Created reusable UI components including Product Card and Instagram feature.",
       "img": "img/portfolio/schwinn.jpg"
     },
     {
-      "clientName": "Herschend Family Entertainment",
+      "name": "Herschend Family Entertainment",
       "abrev": "hfe",
-      "workDescription": "Re-themed existing websites. Involed working with lots of legacy code, contributing to the product while maintaining the standards of the code.",
+      "description": "Re-themed existing websites. Involed working with lots of legacy code, contributing to the product while maintaining the standards of the code.",
       "img": "img/portfolio/hfe.jpg"
     },
     {
-      "clientName": "Cox Media Group",
+      "name": "Cox Media Group",
       "abrev": "cox-media",
-      "workDescription": "Used Javascript to create realtime data reporting dashboard. Scrubbed data from 6 different API sources, migrated to SQL Database, and outputted to Google Data Studio.",
+      "description": "Used Javascript to create realtime data reporting dashboard. Scrubbed data from 6 different API sources, migrated to SQL Database, and outputted to Google Data Studio.",
       "img": "img/portfolio/coxMedia.jpg"
-    }
-  ],
-  "personal-projects": [
+    },
     {
       "name": "Online Store",
       "abrev": "online-store",
