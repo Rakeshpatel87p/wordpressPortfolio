@@ -1,112 +1,21 @@
   <section class="clients-served">
     <h2>Portfolio</h2>
     <div class="container">
+    {% for client in clientsServed %}
       <div
-        class="card"
-        data-order="1"
-      >
+        class="card">
         <a href="">
           <div
             class="wrapper cfa"
-            style="background-image:url('img/portfolio/cfaImg.jpg');"
+            style="background-image:url('{{client.img}}');"
           >
           </div>
           <p>
-            2 years of agile development. Work closely with Designers and
-            Backend developers to create new features. Helped upgrade codebase
-            to be ES6 and Typescript as well as upgraded JQuery to v3.
+          {{client.workDescription}}
           </p>
         </a>
       </div>
-      <div
-        class="card mix all web-design"
-        data-order="1"
-      >
-        <a href="">
-          <div
-            class="wrapper lazy-background schwinn"
-            style="background-image:url('img/portfolio/schwinn.jpg');"
-          >
-          </div>
-          <p>
-            Worked under Senior Developer to deliver a pixel-perfect redesign
-            of the website. Created reusable UI components including Product
-            Card and Instagram feature.
-          </p>
-        </a>
-      </div>
-      <div
-        class="card mix all web-design"
-        data-order="1"
-      >
-        <a href="">
-          <div
-            class="wrapper lazy-background hfe"
-            style="background-image:url('img/portfolio/hfe.jpg');"
-          ></div>>
-      </div>
-      <p>
-        Re-themed existing websites. Involed working with lots of legacy
-        code, contributing to the product while maintaining the standards
-        of the code.
-      </p>
-      </a>
     </div>
-    <div
-      class="card mix all javascript"
-      data-order="2"
-    >
-      <a href="">
-        <div
-          class="wrapper lazy-background coxMedia"
-          style="background-image:url('img/portfolio/coxMedia.jpg');"
-        >
-        </div>
-        <p>
-          Used Javascript to create realtime data reporting dashboard.
-          Scrubbed data from 6 different API sources, migrated to SQL
-          Database, and outputted to Google Data Studio.
-        </p>
-      </a>
-    </div>
-    <div
-      class="card mix all react"
-      data-order="3"
-    >
-      <a href="">
-        <div class="wrapper lazy-background onlineStore">
-        </div>
-        <p>
-          Used React/Apollo to make GraphQL Queries and Mutations to a
-          Prisma Database.
-        </p>
-      </a>
-    </div>
-    <div
-      class="card mix all react"
-      data-order="3"
-    >
-      <a href="">
-        <div class="wrapper lazy-background prodApp">
-        </div>
-        <p>
-          Keep track of your time. Following Pomodoro Method, users can time
-          themselves in completing tasks and see how they perform each week.
-        </p>
-      </a>
-    </div>
-    <div
-      class="card mix all react"
-      data-order="3"
-    >
-      <a href="">
-        <div class="wrapper lazy-background game">
-        </div>
-        <p>
-          Answer questions submitted by other users. Add your own questions
-          for others to answer. Used React/Redux.
-        </p>
-      </a>
-    </div>
-    </div>
+    {% endfor %}
+
   </section>
