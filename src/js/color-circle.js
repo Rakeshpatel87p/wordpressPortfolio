@@ -113,4 +113,4 @@ function anim() {
   });
 }
 
-//anim();
+anim();
