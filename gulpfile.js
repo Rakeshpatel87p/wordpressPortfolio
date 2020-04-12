@@ -6,6 +6,7 @@ const sass = require("gulp-sass");
 const sassLint = require("gulp-sass-lint");
 const concat = require("gulp-concat");
 const log = require("fancy-log");
+const content = require("./src/content/content.json");
 
 function liveServer() {
   return src("public/").pipe(
@@ -22,6 +23,7 @@ function nunjucks() {
     .pipe(
       nunjucksRender({
         path: ["src/templates"],
+        data: content,
       })
     )
     .pipe(dest("public/"))
@@ -55,17 +57,18 @@ exports.lintSass = lintSass;
 exports.nunjucks = nunjucks;
 
 exports.default = function () {
-  watch("src/scss/*.scss", (cb) => {
+  watch("src/scss/*.scss", cb => {
     lintSass();
     css();
     livereload.listen();
     cb();
   });
-  watch("src/templates/**/*.*+(html|njk)", (cb) => {
+  watch("src/templates/**/*.*+(html|njk)", cb => {
     nunjucks();
     livereload.listen();
     cb();
   });
+
   nunjucks();
   lintSass();
   css();
