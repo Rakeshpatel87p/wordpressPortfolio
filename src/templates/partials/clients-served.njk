@@ -1,21 +1,20 @@
   <section class="clients-served">
     <h2>Portfolio</h2>
     <div class="container">
-    {% for client in clientsServed %}
+    {% for project in projects %}
       <div
         class="card">
         <a href="">
           <div
             class="wrapper cfa"
-            style="background-image:url('{{client.img}}');"
+            style="background-image: url('{{project.img}}')"
           >
           </div>
           <p>
-          {{client.workDescription}}
+          {{project.description}}
           </p>
         </a>
       </div>
     </div>
     {% endfor %}
-
   </section>
