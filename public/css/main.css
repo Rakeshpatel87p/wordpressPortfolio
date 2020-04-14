@@ -9,21 +9,22 @@ body {
 .clients-served {
   background: black;
   color: white;
-  padding: 50px 20px; }
-  .clients-served h2 {
-    font-family: "Work Sans", sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-decoration: underline;
-    margin-bottom: 40px; }
+  padding: 100px 20px; }
   .clients-served .container {
     display: grid;
-    gap: 1rem;
-    grid-template-areas: "a x x b" "c x x d" "e x x f";
-    grid-template-rows: repeat(3, 33%);
-    grid-template-columns: 500px auto auto 500px;
-    height: 85vh;
+    grid-template-areas: "a b" "c d" "e f";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    margin: 0 auto;
     --stagger-delay: 100ms; }
+    @media only screen and (min-width: 960px) {
+      .clients-served .container {
+        gap: 1rem;
+        grid-template-areas: "a b b b" "c c d d" "e f f x";
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: 1400px; } }
 
 @keyframes cardEntrance {
   from {
@@ -35,17 +36,22 @@ body {
     transform: scale(1);
     filter: hue-rotate(0deg); } }
   .clients-served a {
-    position: relative;
-    text-decoration: none;
-    color: blue;
-    background: white;
     animation: cardEntrance 700ms ease-out;
     animation-fill-mode: backwards;
-    list-style-type: none;
-    text-align: left;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; }
+    background: white;
+    position: relative;
+    text-decoration: none;
+    transition: ease-in-out all 0.3s;
+    width: 100%; }
+    .clients-served a:hover {
+      transform: translateX(-5px);
+      z-index: 1; }
+      .clients-served a:hover .img {
+        opacity: 1; }
+      .clients-served a:hover .overlay {
+        box-shadow: 6px 9px 20px -11px #E31B6D;
+        opacity: 1;
+        right: 0; }
     .clients-served a:nth-child(1) {
       grid-area: a;
       animation-delay: calc(1 * var(--stagger-delay)); }
@@ -67,19 +73,40 @@ body {
     .clients-served a:last-child {
       grid-area: x;
       animation-delay: calc(7 * var(--stagger-delay)); }
-    .clients-served a:hover .wrapper {
-      filter: blur(5px); }
-    .clients-served a:hover p {
-      height: 100px; }
-    .clients-served a p {
-      background: white;
-      color: black;
-      bottom: 0;
-      height: 0;
+    .clients-served a .img {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      opacity: 0.8;
+      width: 100%; }
+    .clients-served a .overlay {
+      background: black;
+      box-shadow: 0;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       padding: 0 20px;
+      margin: auto;
+      opacity: 0;
       position: absolute;
-      text-align: center;
-      transition: 0.3s all ease-in; }
+      text-align: left;
+      transition: 0.3s all ease-in;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      right: -100px;
+      max-width: 300px; }
+      .clients-served a .overlay h4 {
+        color: #E31B6D;
+        font-family: "Work Sans", sans-serif;
+        font-weight: normal;
+        margin-bottom: 10px;
+        letter-spacing: 1.25px; }
+      .clients-served a .overlay p {
+        letter-spacing: 0.8px;
+        line-height: 1.16667; }
 
 * {
   box-sizing: border-box;
