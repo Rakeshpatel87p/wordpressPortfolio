@@ -1,14 +1,15 @@
 <section class="clients-served">
-  <h2>Portfolio</h2>
   <div class="container">
     {% for project in projects %}
-    <a
-      href=""
-      style="background-image: url('{{project.img}}')"
-    >
-      <p>
-        {{project.description}}
-      </p>
+    <a href="">
+      <div
+        class="img"
+        style="background-image: url('{{project.img}}')"
+      ></div>
+      <div class="overlay">
+        <h4>{{project.name}}</h4>
+        <p>{{project.description}}</p>
+      </div>
     </a>
     {% endfor %}
   </div>
