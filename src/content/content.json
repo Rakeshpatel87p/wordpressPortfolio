@@ -39,5 +39,19 @@
       "abrev": "rather-game",
       "description": "Answer questions submitted by other users. Add your own questions for others to answer. Used React/Redux."
     }
+  ],
+  "skillSets": [
+    {
+      "skill": "Eye for design and creative spirit.",
+      "img": "img/starfishIcon.png"
+    },
+    {
+      "skill": "Clean, maintainable, and tested code.",
+      "img": "img/brainIcon.png"
+    },
+    {
+      "skill": "Responsive and fun iterative process.",
+      "img": "img/high-five.svg"
+    }
   ]
 }
