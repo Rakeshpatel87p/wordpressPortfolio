@@ -3,23 +3,25 @@
 .clients-served {
   background: black;
   color: white;
+  height: 100%;
   padding: 100px 20px;
 
+  h3 {
+    color: $main-pink;
+    font-weight: normal;
+    letter-spacing: 1.25px;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
   .container {
-    display: grid;
-    // sass-lint:disable indentation
-    grid-template-areas:
-      "a b"
-      "c d"
-      "e f";
-    // sass-lint:enable indentation
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    height: 100vh;
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
     --stagger-delay: 100ms;
 
     @include breakpoint($desktop) {
+      display: grid;
       gap: 1rem;
       // sass-lint:disable indentation
       grid-template-areas:
@@ -29,6 +31,8 @@
       // sass-lint:enable indentation
       grid-template-rows: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      height: 100vh;
+      margin: 0 auto;
       max-width: 1400px;
     }
   }
@@ -49,24 +53,29 @@
   a {
     animation: cardEntrance 700ms ease-out;
     animation-fill-mode: backwards;
-    background: white;
-    position: relative;
     text-decoration: none;
+    margin-bottom: 40px;
     transition: ease-in-out all 0.3s;
     width: 100%;
 
-    &:hover {
-      transform: translateX(-5px);
-      z-index: 1;
+    @include breakpoint($desktop) {
+      background: white;
+      position: relative;
+      margin: 0;
 
-      .img {
-        opacity: 1;
-      }
+      &:hover {
+        transform: translateX(-5px);
+        z-index: 1;
 
-      .overlay {
-        box-shadow: 6px 9px 20px -11px $main-pink;
-        opacity: 1;
-        right: 0;
+        .img {
+          opacity: 1;
+        }
+
+        .overlay {
+          box-shadow: 6px 9px 20px -11px $main-pink;
+          opacity: 1;
+          right: 0;
+        }
       }
     }
 
@@ -103,40 +112,52 @@
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
-      height: 100%;
+      height: 200px;
       opacity: 0.8;
       width: 100%;
+
+      @include breakpoint($desktop) {
+        height: 100%;
+      }
     }
 
     .overlay {
       background: black;
-      box-shadow: 0;
       color: white;
-
       display: flex;
       flex-direction: column;
       justify-content: center;
-
-      padding: 0 20px;
-      margin: auto;
-      opacity: 0;
-      position: absolute;
+      margin-top: 20px;
       text-align: left;
-      transition: 0.3s all ease-in;
-      z-index: 1;
 
-      top: 0;
-      bottom: 0;
-      right: -100px;
-      max-width: 300px;
+      @include breakpoint($desktop) {
+        box-shadow: none;
+        margin: auto;
+        opacity: 0;
+        padding: 0 20px;
+        position: absolute;
+        max-width: 300px;
+        transition: 0.3s all ease-in;
+        z-index: 1;
+
+        top: 0;
+        bottom: 0;
+        right: -100px;
+      }
 
       h4 {
-        //border-bottom: 1px dashed $main-pink;
+        border-bottom: 1px dashed $main-pink;
         color: $main-pink;
         font-family: $primary-font;
         font-weight: normal;
-        margin-bottom: 10px;
         letter-spacing: 1.25px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+
+        @include breakpoint($desktop) {
+          border-bottom: 0;
+          padding-bottom: 0;
+        }
       }
 
       p {
