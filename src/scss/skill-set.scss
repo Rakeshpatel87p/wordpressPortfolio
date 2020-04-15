@@ -5,11 +5,12 @@
   color: black;
 
   .container {
-    padding: 50px;
+    padding: 50px 20px;
     @include breakpoint($desktop) {
       display: flex;
       margin: 0 auto;
       max-width: 1000px;
+      padding: 50px;
     }
   }
 
@@ -41,11 +42,13 @@
   }
 
   ul {
-    align-items: stretch;
+    display: flex;
+    flex-wrap: nowrap;
     font-family: $secondary-font;
-    margin: 0 auto;
-    max-width: 1250px;
+    margin: 30px auto;
+    overflow-x: scroll;
     padding: 0;
+    white-space: nowrap;
 
     @include breakpoint($desktop) {
       align-items: center;
@@ -54,19 +57,23 @@
       display: flex;
       justify-content: space-around;
       flex-basis: 1;
+      height: 100%;
+      margin: 0 auto;
+      max-width: 1250px;
+      white-space: normal;
     }
   }
 
   li {
     height: 100%;
     list-style-type: none;
-    margin: 30px auto 0;
+    margin: 0 auto;
     position: relative;
     text-align: center;
-    width: 100%;
+    width: 100vw;
 
     @include breakpoint($desktop) {
-      padding: 0 33px;
+      padding: 10px 33px;
       width: 33%;
     }
 
