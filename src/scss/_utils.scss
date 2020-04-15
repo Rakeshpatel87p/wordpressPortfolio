@@ -3,7 +3,7 @@ $secondary-font: "Open Sans", sans-serif;
 $standard-margin: 50px 20px;
 $desktop: 960px;
 
-$main-pink:#E31B6D;
+$main-pink: #e31b6d;
 
 @mixin section-headers {
   font-family: $primary-font;
@@ -16,15 +16,4 @@ $main-pink:#E31B6D;
   @media only screen and (min-width: $measure) {
     @content;
   }
-}
-
-* {
-  //color: white;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  background: white;
 }
