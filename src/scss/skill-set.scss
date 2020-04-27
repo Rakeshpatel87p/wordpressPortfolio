@@ -20,12 +20,9 @@
 
   h2 {
     @include section-headers();
+    margin-bottom: 50px;
     font-size: 50px;
     text-decoration: none;
-
-    @include breakpoint($desktop) {
-      margin-bottom: 50px;
-    }
 
     a {
       text-decoration: none;
@@ -109,6 +106,21 @@
       @include breakpoint($desktop) {
         border: 0;
       }
+    }
+  }
+
+  .triangle {
+    border-bottom: 100px solid black;
+    border-left: 600px solid transparent;
+    border-right: 600px solid transparent;
+    height: 0;
+    position: absolute;
+    transform: rotate(180deg);
+    width: 100%;
+
+    @include breakpoint($desktop) {
+      border-bottom: 200px solid black;
+      border-right: 825px solid transparent;
     }
   }
 }
