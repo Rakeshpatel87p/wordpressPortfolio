@@ -11,14 +11,14 @@
   .personal-photo {
     border: 1px dashed black;
     border-bottom: 2px solid black;
-    border-right: 5px solid black;
+    border-right: 12px solid black;
     border-radius: 50px;
-    height: 300px;
+    height: 410px;
     margin: auto auto 20px;
     overflow: hidden;
     position: relative;
     transition: 1s all ease;
-    width: 300px;
+    width: 310px;
 
     @include breakpoint($desktop) {
       margin-bottom: 0;
@@ -34,8 +34,16 @@
     }
   }
 
+  .wrapper {
+    display: flex;
+  }
+
   p {
     font-family: $secondary-font;
+    margin-bottom: 50px;
+    padding: 0 50px;
+    text-align: center;
+
     @include breakpoint($desktop) {
       font-size: 15px;
       margin: 25px 0 0 30px;
@@ -48,5 +56,10 @@
       text-transform: uppercase;
       text-decoration: underline;
     }
+  }
+
+  .tech-skills {
+    color: orange;
+    with: 100%;
   }
 }

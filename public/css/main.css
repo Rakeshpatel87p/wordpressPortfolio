@@ -7,14 +7,14 @@
   .about .personal-photo {
     border: 1px dashed black;
     border-bottom: 2px solid black;
-    border-right: 5px solid black;
+    border-right: 12px solid black;
     border-radius: 50px;
-    height: 300px;
+    height: 410px;
     margin: auto auto 20px;
     overflow: hidden;
     position: relative;
     transition: 1s all ease;
-    width: 300px; }
+    width: 310px; }
     @media only screen and (min-width: 960px) {
       .about .personal-photo {
         margin-bottom: 0; } }
@@ -25,8 +25,13 @@
       right: 0;
       top: -5px;
       width: 100%; }
+  .about .wrapper {
+    display: flex; }
   .about p {
-    font-family: "Open Sans", sans-serif; }
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 50px;
+    padding: 0 50px;
+    text-align: center; }
     @media only screen and (min-width: 960px) {
       .about p {
         font-size: 15px;
@@ -37,6 +42,9 @@
       font-family: "Work Sans", sans-serif;
       text-transform: uppercase;
       text-decoration: underline; }
+  .about .tech-skills {
+    color: orange;
+    with: 100%; }
 
 .clients-served {
   background: black;
@@ -369,7 +377,8 @@ header {
   margin: 0; }
 
 body {
-  background: white; }
+  background: white;
+  overflow-x: hidden; }
 
 .skill-set {
   color: black; }
@@ -389,11 +398,9 @@ body {
     font-weight: 400;
     text-align: center;
     text-decoration: underline;
+    margin-bottom: 50px;
     font-size: 50px;
     text-decoration: none; }
-    @media only screen and (min-width: 960px) {
-      .skill-set h2 {
-        margin-bottom: 50px; } }
     .skill-set h2 a {
       text-decoration: none; }
     .skill-set h2 .underline--magical {
@@ -452,3 +459,15 @@ body {
       @media only screen and (min-width: 960px) {
         .skill-set li p {
           border: 0; } }
+  .skill-set .triangle {
+    border-bottom: 100px solid black;
+    border-left: 600px solid transparent;
+    border-right: 600px solid transparent;
+    height: 0;
+    position: absolute;
+    transform: rotate(180deg);
+    width: 100%; }
+    @media only screen and (min-width: 960px) {
+      .skill-set .triangle {
+        border-bottom: 200px solid black;
+        border-right: 825px solid transparent; } }
