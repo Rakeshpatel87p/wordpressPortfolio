@@ -1,3 +1,43 @@
+.about {
+  font-family: "Work Sans", sans-serif; }
+  @media only screen and (min-width: 960px) {
+    .about {
+      align-items: center;
+      padding-right: 20px; } }
+  .about .personal-photo {
+    border: 1px dashed black;
+    border-bottom: 2px solid black;
+    border-right: 5px solid black;
+    border-radius: 50px;
+    height: 300px;
+    margin: auto auto 20px;
+    overflow: hidden;
+    position: relative;
+    transition: 1s all ease;
+    width: 300px; }
+    @media only screen and (min-width: 960px) {
+      .about .personal-photo {
+        margin-bottom: 0; } }
+    .about .personal-photo img {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: -5px;
+      width: 100%; }
+  .about p {
+    font-family: "Open Sans", sans-serif; }
+    @media only screen and (min-width: 960px) {
+      .about p {
+        font-size: 15px;
+        margin: 25px 0 0 30px;
+        max-width: 500px;
+        text-align: center; } }
+    .about p .txt-decoration {
+      font-family: "Work Sans", sans-serif;
+      text-transform: uppercase;
+      text-decoration: underline; }
+
 .clients-served {
   background: black;
   color: white;
@@ -334,23 +374,26 @@ body {
 .skill-set {
   color: black; }
   .skill-set .container {
-    padding: 50px 20px; }
+    padding: 50px;
+    border-bottom: 24px solid black;
+    border-left: 16px solid black;
+    border-right: 16px solid black;
+    width: 100%; }
     @media only screen and (min-width: 960px) {
       .skill-set .container {
-        display: flex;
-        margin: 0 auto;
-        max-width: 1000px;
+        border: 0;
+        margin: 50px 20px;
         padding: 50px; } }
   .skill-set h2 {
     font-family: "Work Sans", sans-serif;
     font-weight: 400;
     text-align: center;
     text-decoration: underline;
-    font-size: 40px;
+    font-size: 50px;
     text-decoration: none; }
     @media only screen and (min-width: 960px) {
       .skill-set h2 {
-        margin: auto 45px auto 0; } }
+        margin-bottom: 50px; } }
     .skill-set h2 a {
       text-decoration: none; }
     .skill-set h2 .underline--magical {
@@ -363,18 +406,12 @@ body {
         background-size: 100% 88%;
         color: blue; }
   .skill-set ul {
-    display: flex;
-    flex-wrap: nowrap;
     font-family: "Open Sans", sans-serif;
     margin: 30px auto;
-    overflow-x: scroll;
-    padding: 0;
-    white-space: nowrap; }
+    padding: 0; }
     @media only screen and (min-width: 960px) {
       .skill-set ul {
         align-items: center;
-        border-left: 1px dashed black;
-        border-bottom-left-radius: 15px;
         display: flex;
         justify-content: space-around;
         flex-basis: 1;
@@ -385,75 +422,33 @@ body {
   .skill-set li {
     height: 100%;
     list-style-type: none;
-    margin: 0 auto;
+    margin: 0 auto 50px;
     position: relative;
-    text-align: center;
-    width: 100vw; }
+    text-align: center; }
     @media only screen and (min-width: 960px) {
       .skill-set li {
+        margin-right: 10px;
         padding: 10px 33px;
         width: 33%; } }
     .skill-set li div {
-      width: 100%;
-      height: 100%; }
-    .skill-set li img {
+      box-shadow: 0 6px 10px #777;
+      padding: 50px 0;
+      height: 100%;
       transition: all 0.5s ease-in-out;
-      width: 50%; }
+      width: 100%; }
       @media only screen and (min-width: 960px) {
-        .skill-set li img {
-          width: 100%; } }
-      .skill-set li img:hover {
-        transform: scale(1.1); }
+        .skill-set li div {
+          padding: 50px; }
+          .skill-set li div:hover {
+            transform: rotate(-1deg);
+            transform: scale(1.1); } }
+    .skill-set li img {
+      height: 150px;
+      width: auto; }
     .skill-set li p {
-      margin-top: 10px; }
-  .skill-set .wrapper {
-    margin: 50px 20px;
-    padding: 50px 20px 50px;
-    text-align: center; }
-    @media only screen and (min-width: 960px) {
-      .skill-set .wrapper {
-        display: flex;
-        margin: auto;
-        max-width: 1350px; } }
-  .skill-set .about {
-    font-family: "Work Sans", sans-serif; }
-    @media only screen and (min-width: 960px) {
-      .skill-set .about {
-        align-items: center;
-        padding-right: 20px; } }
-    .skill-set .about .personal-photo {
-      border: 1px dashed black;
-      border-bottom: 2px solid black;
-      border-right: 5px solid black;
-      border-radius: 50px;
-      height: 300px;
-      margin: auto auto 20px;
-      overflow: hidden;
-      position: relative;
-      transition: 1s all ease;
-      width: 300px; }
+      font-weight: bold;
+      margin: auto;
+      padding: 10px 0; }
       @media only screen and (min-width: 960px) {
-        .skill-set .about .personal-photo {
-          margin-bottom: 0; } }
-      .skill-set .about .personal-photo img {
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: -5px;
-        width: 100%; }
-    .skill-set .about p {
-      font-family: "Open Sans", sans-serif; }
-      @media only screen and (min-width: 960px) {
-        .skill-set .about p {
-          font-size: 15px;
-          margin: 25px 0 0 30px;
-          max-width: 500px;
-          text-align: center; } }
-      .skill-set .about p .txt-decoration {
-        font-family: "Work Sans", sans-serif;
-        text-transform: uppercase;
-        text-decoration: underline; }
-  .skill-set .tech-skills {
-    border: 1px solid black;
-    width: 50%; }
+        .skill-set li p {
+          border: 0; } }

@@ -1,54 +1,33 @@
 <section class="skill-set">
-  <div class="container">
-    <h2>
-      Combining
-      <span class="underline--magical"><a
-          href="https://artsandculture.google.com/"
-          target="_blank"
-        >Art</a>
-      </span>
-      &
-      <span class="underline--magical"><a
-          href="https://developer.mozilla.org/en-US/docs/Learn"
-          target="_blank"
-        >
-          Code</a></span>
-    </h2>
-    <ul>
-      {% for skill in skillSets %}
-      <li>
-        <div>
-          <img
-            src="{{skill.img}}"
-            alt=""
-          />
-          <p>
-            {{skill.skill}}
-          </p>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="wrapper lazy-background">
-    <div class="about">
-      <div class="personal-photo">
-        <img
-          src="img/Rakesh caricature.jpg"
-          alt=""
-        />
-      </div>
-      <p>
-        I'm <span class="txt-decoration">Rakesh</span>, a lawyer by training
-        but a technologist at heart. I like new challenges and solving big
-        problems with tech-based solutions. I'm a fast learner, picking up
-        tools as needed with a preference in keeping things simple and
-        concise. For fun, I digitally nomad, cycle, and practice The Office
-        humor. Reach out to connect!
-      </p>
+    <div class="container">
+        <h2>
+            Combining
+            <span class="underline--magical"><a
+                    href="https://artsandculture.google.com/"
+                    target="_blank"
+                >Art</a>
+            </span>
+            &
+            <span class="underline--magical"><a
+                    href="https://developer.mozilla.org/en-US/docs/Learn"
+                    target="_blank"
+                >
+                    Code</a></span>
+        </h2>
+        <ul>
+            {% for skill in skillSets %}
+            <li>
+                <div>
+                    <img
+                        src="{{skill.img}}"
+                        alt=""
+                    />
+                    <p>
+                        {{skill.skill}}
+                    </p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
-    <div class="tech-skills">
-
-    </div>
-  </div>
 </section>

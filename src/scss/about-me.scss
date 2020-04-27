@@ -1,0 +1,52 @@
+@import "_utils";
+
+.about {
+  font-family: $primary-font;
+
+  @include breakpoint($desktop) {
+    align-items: center;
+    padding-right: 20px;
+  }
+
+  .personal-photo {
+    border: 1px dashed black;
+    border-bottom: 2px solid black;
+    border-right: 5px solid black;
+    border-radius: 50px;
+    height: 300px;
+    margin: auto auto 20px;
+    overflow: hidden;
+    position: relative;
+    transition: 1s all ease;
+    width: 300px;
+
+    @include breakpoint($desktop) {
+      margin-bottom: 0;
+    }
+
+    img {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: -5px;
+      width: 100%;
+    }
+  }
+
+  p {
+    font-family: $secondary-font;
+    @include breakpoint($desktop) {
+      font-size: 15px;
+      margin: 25px 0 0 30px;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .txt-decoration {
+      font-family: $primary-font;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+  }
+}
