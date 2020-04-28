@@ -17,15 +17,15 @@
         <ul>
             {% for skill in skillSets %}
             <li>
-                <div>
-                    <img
-                        src="{{skill.img}}"
-                        alt=""
-                    />
-                    <p>
-                        {{skill.skill}}
-                    </p>
+                <div class="art-container">
+                    <div class="art">
+                        <img
+                            src="{{skill.img}}"
+                            alt=""
+                        />
+                    </div>
                 </div>
+                <p>{{skill.skill}}</p>
             </li>
             {% endfor %}
         </ul>
