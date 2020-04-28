@@ -43,15 +43,15 @@
   "skillSets": [
     {
       "skill": "Eye for design and creative spirit.",
-      "img": "img/starfishIcon.png"
+      "img": "img/abstract.png"
     },
     {
       "skill": "Clean, maintainable, and tested code.",
-      "img": "img/brainIcon.png"
+      "img": "img/bulb.png"
     },
     {
       "skill": "Responsive and fun iterative process.",
-      "img": "img/high-five.svg"
+      "img": "img/friends.png"
     }
   ]
 }
