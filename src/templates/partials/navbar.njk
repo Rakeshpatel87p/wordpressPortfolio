@@ -12,16 +12,16 @@
 </nav>
 <script>
   const navBar = document.querySelector('.navBar');
-  const navBarTop = navBar.offsetTop;
-  const navBar_top =
-    window.addEventListener("scroll", () => {
-      //console.log(navBar);
-      navBarTop < window.scrollY ? navBar.classList.add('fixed') : navBar.classList.remove('fixed')
+  const navBarTop = navBar.offsetTop - 100;
+  window.addEventListener("scroll", () => {
+    //console.log(navBar);
+    if (navBarTop < window.scrollY) {
+      navBar.classList.add('fixed');
       navBar.classList.add('expand')
-    })
+    } else {
+      navBar.classList.remove('fixed');
+      navBar.classList.remove('expand')
+    }
 
-  //take off position
-
-  //once scrolled intoView, then apply this new class
-  //once scrolled back into view, take off the class
+  })
 </script>
