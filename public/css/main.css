@@ -331,50 +331,144 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh; }
+  height: 70vh;
+  overflow: hidden;
+  width: 100%; }
   @media only screen and (min-width: 960px) {
     .hero {
-      height: 1000px; } }
-  .hero .text {
-    align-items: center;
-    background: transparent;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+      height: 100vh; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0.2; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+    transform: translateY(-50%); }
+  50% {
+    opacity: 0.3; }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
+  .hero canvas {
+    animation: fadeOut 20s forwards;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    opacity: 0;
+    z-index: 10000; }
+  .hero .painting {
+    animation: fadeIn 10s forwards;
+    background-image: url("img/kandinsky-bckgrd.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    opacity: 0;
     position: absolute;
+    right: 0;
     width: 100%; }
-  .hero h1,
-  .hero p {
-    background: transparent; }
-  .hero h1 {
-    border-bottom: 3px solid #e31b6d;
-    font-family: "Work Sans", sans-serif;
-    font-size: 75px;
+    @media only screen and (min-width: 960px) {
+      .hero .painting {
+        background-size: cover; } }
+
+@keyframes slider {
+  0% {
+    border-left: 0;
+    right: 0; }
+  100% {
+    border-left: 5px solid #e31b6d;
+    left: 50%;
+    width: 30%; } }
+
+@keyframes slide-in {
+  0% {
+    left: 0;
+    width: 0%; }
+  100% {
+    width: 20%; } }
+
+.navBar {
+  animation: slideIn 1s forwards;
+  animation-delay: 1s;
+  background: black;
+  bottom: 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  transition: width 5s ease-in-out;
+  width: auto;
+  z-index: 100000; }
+  @media only screen and (min-width: 960px) {
+    .navBar {
+      text-align: left; } }
+  .navBar.expand {
+    padding: 0 20px;
+    width: 100%; }
+    @media only screen and (min-width: 960px) {
+      .navBar.expand {
+        padding: 0 150px; } }
+    .navBar.expand ul {
+      display: flex;
+      opacity: 1; }
+  .navBar.fixed {
+    box-shadow: 0px 1px 6px #e31b6d;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    width: 100%; }
+
+@keyframes slideIn {
+  0% {
+    right: -100px;
+    opacity: 0; }
+  100% {
+    right: 0;
+    opacity: 1; } }
+  .navBar .info {
+    display: none;
+    padding: 20px; }
+    @media only screen and (min-width: 960px) {
+      .navBar .info {
+        display: block; } }
+  .navBar h1 {
+    font-size: 30px;
     font-weight: 100; }
-  .hero p {
+  .navBar p {
+    color: #e31b6d;
     font-family: "Open Sans", sans-serif;
-    font-size: 55px;
-    margin: 15px;
-    text-align: center;
-    text-transform: uppercase; }
-  .hero button {
-    background: black;
-    color: white;
     font-size: 20px;
-    margin-top: 25px;
-    outline: 0;
-    padding: 20px;
-    transition: 0.3s all ease-out; }
-    .hero button:hover {
-      color: #e31b6d;
-      transform: scale(1.1);
-      cursor: pointer; }
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    text-transform: uppercase; }
+  .navBar ul {
+    display: flex;
+    display: none;
+    align-self: center;
+    opacity: 0;
+    font-family: "Work Sans", sans-serif;
+    transition: opacity 10s ease; }
+    .navBar ul li {
+      border-bottom: 0;
+      font-size: 20px;
+      list-style-type: none;
+      margin-right: 50px;
+      padding-bottom: 5px; }
+      .navBar ul li:hover {
+        border-bottom: 3px solid #e31b6d; }
 
 * {
   box-sizing: border-box;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  overflow-x: hidden; }
 
 body {
   background: white;
