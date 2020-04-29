@@ -8,14 +8,11 @@
   color: white;
   display: flex;
   justify-content: space-between;
-  //height: 60px;
   opacity: 0;
   position: absolute;
-  right: 0;
   text-align: center;
-  transition: width 5s ease-in-out;
-  //width: 200px;
-  width: auto;
+  transition: all 0.5s ease-in-out;
+  width: 15%;
   z-index: 100000;
 
   @include breakpoint($desktop) {
@@ -23,7 +20,6 @@
   }
 
   &.expand {
-    //transition-delay: 1s;
     padding: 0 20px;
     width: 100%;
 
