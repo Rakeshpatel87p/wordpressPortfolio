@@ -1,0 +1,27 @@
+<nav class="navBar">
+  <div class="info">
+    <h1>Rakesh Patel</h1>
+    <p>UI Developer</p>
+  </div>
+  <ul>
+    <li>About</li>
+    <li>Tools</li>
+    <li>Portfolio</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+<script>
+  const navBar = document.querySelector('.navBar');
+  const navBarTop = navBar.offsetTop;
+  const navBar_top =
+    window.addEventListener("scroll", () => {
+      //console.log(navBar);
+      navBarTop < window.scrollY ? navBar.classList.add('fixed') : navBar.classList.remove('fixed')
+      navBar.classList.add('expand')
+    })
+
+  //take off position
+
+  //once scrolled intoView, then apply this new class
+  //once scrolled back into view, take off the class
+</script>
