@@ -26,7 +26,9 @@
       top: -5px;
       width: 100%; }
   .about .wrapper {
-    display: flex; }
+    display: flex;
+    justify-content: center;
+    margin: 75px 0 100px; }
   .about p {
     font-family: "Open Sans", sans-serif;
     margin-bottom: 50px;
@@ -34,17 +36,64 @@
     text-align: center; }
     @media only screen and (min-width: 960px) {
       .about p {
-        font-size: 15px;
-        margin: 25px 0 0 30px;
-        max-width: 500px;
-        text-align: center; } }
+        flex-basis: 45%;
+        font-size: 25px;
+        margin: auto 50px auto 0;
+        max-width: 750px;
+        text-align: left; } }
     .about p .txt-decoration {
       font-family: "Work Sans", sans-serif;
       text-transform: uppercase;
       text-decoration: underline; }
-  .about .tech-skills {
-    color: orange;
-    with: 100%; }
+
+@keyframes animatedWidth {
+  from {
+    opacity: 0;
+    width: 0; }
+  to {
+    opacity: 1;
+    width: 500px; } }
+  .about .tech-skills.animate .bar {
+    animation: animatedWidth 1s ease-in-out;
+    animation-fill-mode: forwards; }
+  .about .tech-skills h2 {
+    display: none;
+    margin-bottom: 30px;
+    text-align: center; }
+  .about .tech-skills .bar {
+    --stagger-delay: 100ms;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 40px;
+    margin-bottom: 5px;
+    position: relative;
+    width: 500px; }
+    .about .tech-skills .bar:nth-child(1) {
+      animation-delay: calc(1 * var(--stagger-delay)); }
+    .about .tech-skills .bar:nth-child(2) {
+      animation-delay: calc(2 * var(--stagger-delay)); }
+    .about .tech-skills .bar:nth-child(3) {
+      animation-delay: calc(3 * var(--stagger-delay)); }
+    .about .tech-skills .bar:nth-child(4) {
+      animation-delay: calc(4 * var(--stagger-delay)); }
+    .about .tech-skills .bar:nth-child(5) {
+      animation-delay: calc(5 * var(--stagger-delay)); }
+    .about .tech-skills .bar:nth-child(6) {
+      animation-delay: calc(6 * var(--stagger-delay)); }
+    .about .tech-skills .bar:nth-child(7) {
+      animation-delay: calc(7 * var(--stagger-delay)); }
+    .about .tech-skills .bar:nth-child(8) {
+      animation-delay: calc(8 * var(--stagger-delay)); }
+    .about .tech-skills .bar:last-child {
+      animation-delay: calc(9 * var(--stagger-delay)); }
+  .about .tech-skills span {
+    background: #e31b6d;
+    color: white;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    width: 400px;
+    transition: width 0.5s ease; }
 
 .clients-served {
   background: black;
@@ -354,13 +403,13 @@ header {
     opacity: 1;
     transform: translateY(0%); } }
   .hero canvas {
-    animation: fadeOut 20s forwards;
+    animation: fadeOut 3s forwards;
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
     opacity: 0;
     z-index: 10000; }
   .hero .painting {
-    animation: fadeIn 10s forwards;
+    animation: fadeIn 5s forwards;
     background-image: url("img/kandinsky-bckgrd.jpg");
     background-position: center;
     background-repeat: no-repeat;
