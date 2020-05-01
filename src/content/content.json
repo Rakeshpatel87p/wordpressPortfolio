@@ -27,17 +27,20 @@
     {
       "name": "Online Store",
       "abrev": "online-store",
-      "description": "Used React/Apollo to make GraphQL Queries and Mutations to a Prisma Database."
+      "description": "Used React/Apollo to make GraphQL Queries and Mutations to a Prisma Database.",
+      "img": "img/portfolio/onlineStore.jpg"
     },
     {
       "name": "Productivity App",
       "abrev": "productiv-app",
-      "description": "Keep track of your time. Following Pomodoro Method, users can time themselves in completing tasks and see how they perform each week."
+      "description": "Keep track of your time. Following Pomodoro Method, users can time themselves in completing tasks and see how they perform each week.",
+      "img": "img/portfolio/productivityApp.jpg"
     },
     {
       "name": "Would You Rather Game",
       "abrev": "rather-game",
-      "description": "Answer questions submitted by other users. Add your own questions for others to answer. Used React/Redux."
+      "description": "Answer questions submitted by other users. Add your own questions for others to answer. Used React/Redux.",
+      "img": "img/portfolio/game.jpg"
     }
   ],
   "skillSets": [
