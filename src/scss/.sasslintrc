@@ -35,11 +35,6 @@
     ],
     "variable-for-property": [
       2,
-      {
-        "properties": [
-          "content"
-        ]
-      }
     ]
   }
 }
