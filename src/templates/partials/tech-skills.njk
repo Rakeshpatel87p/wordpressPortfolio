@@ -1,5 +1,7 @@
-<div class="tech-skills">
-  <div class="bar"><span>90%</span></div>
-  <div class="bar"><span>50%</span></div>
-  <div class="bar"><span>70%</span></div>
+<div class="tech-skills animate">
+  <h2>Favored Tools</h2>
+  {% for tech in techSkills %}
+  <div class="bar"><span>{{tech.tech}}</span></div>
+  {% endfor %}
+</div>
 </div>

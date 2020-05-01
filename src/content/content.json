@@ -53,5 +53,15 @@
       "skill": "Responsive and fun iterative process.",
       "img": "img/friends.png"
     }
+  ],
+  "techSkills": [
+    { "tech": "HTML", "percent": "90" },
+    { "tech": "CSS", "percent": "90" },
+    { "tech": "React", "percent": "90" },
+    { "tech": "Redux", "percent": "90" },
+    { "tech": "Apollo", "percent": "90" },
+    { "tech": "GraphQL", "percent": "90" },
+    { "tech": "Typescript", "percent": "90" },
+    { "tech": "Node", "percent": "90" }
   ]
 }
