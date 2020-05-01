@@ -40,7 +40,7 @@
   }
 
   canvas {
-    animation: fadeOut 20s forwards;
+    animation: fadeOut 3s forwards;
     //animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
@@ -49,7 +49,7 @@
   }
 
   .painting {
-    animation: fadeIn 10s forwards;
+    animation: fadeIn 5s forwards;
     //animation-delay: 2s;
     background-image: url("img/kandinsky-bckgrd.jpg");
     background-position: center;
