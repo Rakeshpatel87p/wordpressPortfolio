@@ -4,11 +4,12 @@
   color: $main-black;
 
   .container {
-    padding: 50px;
+    padding: 50px 24px;
     border-bottom: 24px solid $main-black;
     border-left: 16px solid $main-black;
     border-right: 16px solid $main-black;
     width: 100%;
+
     @include breakpoint($desktop) {
       border: 0;
       margin: 50px 0 100px;
@@ -110,12 +111,13 @@
     height: 300px;
     margin: 0 auto 30px;
     position: relative;
-    width: 300px;
     border: 5px solid black;
     box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.3);
+    width: auto;
 
     @include breakpoint($desktop) {
       margin: 0;
+      width: 300px;
     }
   }
 

@@ -35,9 +35,12 @@
   }
 
   .wrapper {
-    display: flex;
-    justify-content: center;
     margin: 75px 0 100px;
+
+    @include breakpoint($desktop) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   p {
