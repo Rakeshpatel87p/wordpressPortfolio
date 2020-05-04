@@ -93,12 +93,20 @@
 
       &:before {
         content: "{";
-        left: -10px;
+        left: 0;
+
+        @include breakpoint($desktop) {
+          left: -10px;
+        }
       }
 
       &:after {
         content: "}";
-        right: -10px;
+        right: 0;
+
+        @include breakpoint($desktop) {
+          right: -10px;
+        }
       }
 
       @include breakpoint($desktop) {
