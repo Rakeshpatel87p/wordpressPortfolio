@@ -69,16 +69,17 @@
   @keyframes animatedWidth {
     from {
       opacity: 0;
-      width: 0;
+      width: 0%;
     }
 
     to {
       opacity: 1;
-      width: 500px;
+      width: 100%;
     }
   }
 
   .tech-skills {
+    width: 100%;
     &.animate {
       .bar {
         animation: animatedWidth 1s ease-in-out;
@@ -98,7 +99,6 @@
       border-radius: 5px;
       height: 40px;
       margin-bottom: 5px;
-      max-width: 300px;
       position: relative;
       width: 100%;
 
