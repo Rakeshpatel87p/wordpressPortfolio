@@ -94,19 +94,11 @@
       &:before {
         content: "{";
         left: 0;
-
-        @include breakpoint($desktop) {
-          left: -10px;
-        }
       }
 
       &:after {
         content: "}";
         right: 0;
-
-        @include breakpoint($desktop) {
-          right: -10px;
-        }
       }
 
       @include breakpoint($desktop) {
@@ -118,6 +110,7 @@
   .art-container {
     height: 300px;
     margin: 0 auto 30px;
+    max-width: 400px;
     position: relative;
     border: 5px solid black;
     box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.3);
@@ -161,6 +154,7 @@
     border-bottom: 100px solid black;
     border-left: 600px solid transparent;
     border-right: 600px solid transparent;
+    display: none;
     height: 0;
     position: absolute;
     transform: rotate(180deg);
@@ -169,6 +163,7 @@
     @include breakpoint($desktop) {
       border-bottom: 200px solid black;
       border-right: 825px solid transparent;
+      display: block;
     }
   }
 }
