@@ -53,55 +53,56 @@
 @keyframes animatedWidth {
   from {
     opacity: 0;
-    width: 0; }
+    width: 0%; }
   to {
     opacity: 1;
-    width: 500px; } }
-  .about .tech-skills.animate .bar {
-    animation: animatedWidth 1s ease-in-out;
-    animation-fill-mode: forwards; }
-  .about .tech-skills h2 {
-    display: none;
-    margin-bottom: 30px;
-    text-align: center; }
-  .about .tech-skills .bar {
-    --stagger-delay: 100ms;
-    border: 1px solid black;
-    border-radius: 5px;
-    height: 40px;
-    margin-bottom: 5px;
-    max-width: 300px;
-    position: relative;
+    width: 100%; } }
+  .about .tech-skills {
     width: 100%; }
-    @media only screen and (min-width: 960px) {
-      .about .tech-skills .bar {
-        max-width: 500px; } }
-    .about .tech-skills .bar:nth-child(1) {
-      animation-delay: calc(1 * var(--stagger-delay)); }
-    .about .tech-skills .bar:nth-child(2) {
-      animation-delay: calc(2 * var(--stagger-delay)); }
-    .about .tech-skills .bar:nth-child(3) {
-      animation-delay: calc(3 * var(--stagger-delay)); }
-    .about .tech-skills .bar:nth-child(4) {
-      animation-delay: calc(4 * var(--stagger-delay)); }
-    .about .tech-skills .bar:nth-child(5) {
-      animation-delay: calc(5 * var(--stagger-delay)); }
-    .about .tech-skills .bar:nth-child(6) {
-      animation-delay: calc(6 * var(--stagger-delay)); }
-    .about .tech-skills .bar:nth-child(7) {
-      animation-delay: calc(7 * var(--stagger-delay)); }
-    .about .tech-skills .bar:nth-child(8) {
-      animation-delay: calc(8 * var(--stagger-delay)); }
-    .about .tech-skills .bar:last-child {
-      animation-delay: calc(9 * var(--stagger-delay)); }
-  .about .tech-skills span {
-    background: #e31b6d;
-    color: white;
-    height: 100%;
-    padding: 10px;
-    position: absolute;
-    width: 75%;
-    transition: width 0.5s ease; }
+    .about .tech-skills.animate .bar {
+      animation: animatedWidth 1s ease-in-out;
+      animation-fill-mode: forwards; }
+    .about .tech-skills h2 {
+      display: none;
+      margin-bottom: 30px;
+      text-align: center; }
+    .about .tech-skills .bar {
+      --stagger-delay: 100ms;
+      border: 1px solid black;
+      border-radius: 5px;
+      height: 40px;
+      margin-bottom: 5px;
+      position: relative;
+      width: 100%; }
+      @media only screen and (min-width: 960px) {
+        .about .tech-skills .bar {
+          max-width: 500px; } }
+      .about .tech-skills .bar:nth-child(1) {
+        animation-delay: calc(1 * var(--stagger-delay)); }
+      .about .tech-skills .bar:nth-child(2) {
+        animation-delay: calc(2 * var(--stagger-delay)); }
+      .about .tech-skills .bar:nth-child(3) {
+        animation-delay: calc(3 * var(--stagger-delay)); }
+      .about .tech-skills .bar:nth-child(4) {
+        animation-delay: calc(4 * var(--stagger-delay)); }
+      .about .tech-skills .bar:nth-child(5) {
+        animation-delay: calc(5 * var(--stagger-delay)); }
+      .about .tech-skills .bar:nth-child(6) {
+        animation-delay: calc(6 * var(--stagger-delay)); }
+      .about .tech-skills .bar:nth-child(7) {
+        animation-delay: calc(7 * var(--stagger-delay)); }
+      .about .tech-skills .bar:nth-child(8) {
+        animation-delay: calc(8 * var(--stagger-delay)); }
+      .about .tech-skills .bar:last-child {
+        animation-delay: calc(9 * var(--stagger-delay)); }
+    .about .tech-skills span {
+      background: #e31b6d;
+      color: white;
+      height: 100%;
+      padding: 10px;
+      position: absolute;
+      width: 75%;
+      transition: width 0.5s ease; }
 
 .clients-served {
   background: black;
@@ -604,21 +605,16 @@ body {
       .skill-set li p:before {
         content: "{";
         left: 0; }
-        @media only screen and (min-width: 960px) {
-          .skill-set li p:before {
-            left: -10px; } }
       .skill-set li p:after {
         content: "}";
         right: 0; }
-        @media only screen and (min-width: 960px) {
-          .skill-set li p:after {
-            right: -10px; } }
       @media only screen and (min-width: 960px) {
         .skill-set li p {
           border: 0; } }
   .skill-set .art-container {
     height: 300px;
     margin: 0 auto 30px;
+    max-width: 400px;
     position: relative;
     border: 5px solid black;
     box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.3);
@@ -653,6 +649,7 @@ body {
     border-bottom: 100px solid black;
     border-left: 600px solid transparent;
     border-right: 600px solid transparent;
+    display: none;
     height: 0;
     position: absolute;
     transform: rotate(180deg);
@@ -660,4 +657,5 @@ body {
     @media only screen and (min-width: 960px) {
       .skill-set .triangle {
         border-bottom: 200px solid black;
-        border-right: 825px solid transparent; } }
+        border-right: 825px solid transparent;
+        display: block; } }
