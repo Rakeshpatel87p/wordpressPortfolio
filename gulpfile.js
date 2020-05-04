@@ -2,6 +2,7 @@ const { src, dest, parallel, watch } = require("gulp");
 const server = require("gulp-webserver");
 const livereload = require("gulp-livereload");
 const nunjucksRender = require("gulp-nunjucks-render");
+var plumber = require("gulp-plumber");
 const sass = require("gulp-sass");
 const sassLint = require("gulp-sass-lint");
 const concat = require("gulp-concat");
@@ -38,19 +39,27 @@ function lintSass() {
       })
     )
     .pipe(sassLint.format())
+    .on("error", handleError)
     .pipe(livereload());
 }
 
 function css() {
   return src("src/scss/*.scss")
+    .pipe(plumber())
     .pipe(
       sass({
         errLogToConsole: true,
       })
     )
+    .on("error", handleError)
     .pipe(concat("main.css"))
     .pipe(dest("public/css/"))
+
     .pipe(livereload());
+}
+
+function handleError(err) {
+  console.log(err.toString());
 }
 
 exports.lintSass = lintSass;
