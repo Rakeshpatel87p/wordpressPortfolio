@@ -567,6 +567,7 @@ header {
     right: 0;
     opacity: 1; } }
   .navBar .info {
+    height: 100%;
     padding: 10px 20px; }
     @media only screen and (min-width: 960px) {
       .navBar .info {
@@ -584,20 +585,22 @@ header {
     margin-top: 5px;
     text-transform: uppercase; }
   .navBar ul {
+    align-items: center;
     display: flex;
     display: none;
-    align-self: center;
+    height: 100%;
     opacity: 0;
     font-family: "Work Sans", sans-serif;
     transition: opacity 10s ease; }
     .navBar ul li {
       border-bottom: 0;
+      cursor: pointer;
       font-size: 20px;
       list-style-type: none;
       margin-right: 50px;
       padding-bottom: 5px; }
       .navBar ul li:hover {
-        border-bottom: 3px solid #e31b6d; }
+        border-bottom: 1px solid #e31b6d; }
 
 * {
   box-sizing: border-box;

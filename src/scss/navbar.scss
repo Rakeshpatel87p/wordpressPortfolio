@@ -61,6 +61,7 @@
   }
 
   .info {
+    height: 100%;
     padding: 10px 20px;
 
     @include breakpoint($desktop) {
@@ -85,22 +86,24 @@
   }
 
   ul {
+    align-items: center;
     display: flex;
     display: none;
-    align-self: center;
+    height: 100%;
     opacity: 0;
     font-family: $primary-font;
     transition: opacity 10s ease;
 
     li {
       border-bottom: 0;
+      cursor: pointer;
       font-size: 20px;
       list-style-type: none;
       margin-right: 50px;
       padding-bottom: 5px;
 
       &:hover {
-        border-bottom: 3px solid $main-pink;
+        border-bottom: 1px solid $main-pink;
       }
     }
   }
