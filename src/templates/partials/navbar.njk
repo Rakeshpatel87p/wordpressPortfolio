@@ -11,17 +11,29 @@
   </ul>
 </nav>
 <script>
-  const navBar = document.querySelector('.navBar');
-  const navBarTop = navBar.offsetTop - 100;
-  window.addEventListener("scroll", () => {
-    //console.log(navBar);
-    if (navBarTop < window.scrollY) {
-      navBar.classList.add('fixed');
-      navBar.classList.add('expand')
-    } else {
-      navBar.classList.remove('fixed');
-      navBar.classList.remove('expand')
-    }
 
+  window.addEventListener('DOMContentLoaded', () => {
+    const navBar = document.querySelector('.navBar');
+    const navBarTop = navBar.offsetTop - 100;
+
+    const personalPhoto = document.querySelector('.personal-photo');
+    const personalPhotoTop = personalPhoto.offsetTop;
+
+    const skills = document.querySelector('.tech-skills');
+
+    window.addEventListener("scroll", () => {
+      //console.log(navBar);
+      if (navBarTop < window.scrollY) {
+        navBar.classList.add('fixed');
+        navBar.classList.add('expand')
+      } else {
+        navBar.classList.remove('fixed');
+        navBar.classList.remove('expand')
+      }
+
+      if (personalPhotoTop < window.scrollY) {
+        skills.classList.add('animate')
+      }
+    })
   })
 </script>
