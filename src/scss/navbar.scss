@@ -4,19 +4,20 @@
   animation: slideIn 1s forwards;
   animation-delay: 1s;
   background: $main-black;
-  bottom: 0;
+  bottom: 10px;
   color: white;
-  display: none;
   justify-content: space-between;
   opacity: 0;
   position: absolute;
   text-align: left;
   transition: all 0.5s ease-in-out;
-  width: 15%;
+  width: 55%;
   z-index: 100000;
 
   @include breakpoint($desktop) {
+    bottom: 0;
     display: flex;
+    width: 15%;
   }
 
   &.expand {
@@ -28,17 +29,23 @@
     }
 
     ul {
-      display: flex;
-      opacity: 1;
+      @include breakpoint($desktop) {
+        display: flex;
+        opacity: 1;
+      }
     }
   }
 
   &.fixed {
     box-shadow: 0px 1px 6px $main-pink;
-    height: 100px;
+    height: 85px;
     position: fixed;
     top: 0;
     width: 100%;
+
+    @include breakpoint($desktop) {
+      height: 100px;
+    }
   }
 
   @keyframes slideIn {
@@ -54,11 +61,11 @@
   }
 
   .info {
-    display: none;
-    padding: 20px;
+    padding: 10px 20px;
 
     @include breakpoint($desktop) {
       display: block;
+      padding: 20px;
     }
   }
 
