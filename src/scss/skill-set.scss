@@ -4,7 +4,7 @@
   color: $main-black;
 
   .container {
-    padding: 50px 24px;
+    padding: 50px 24px 0;
     border-bottom: 24px solid $main-black;
     border-left: 16px solid $main-black;
     border-right: 16px solid $main-black;
@@ -47,7 +47,7 @@
 
   ul {
     font-family: $secondary-font;
-    margin: 30px auto;
+    margin: 30px auto 0;
     padding: 0;
 
     @include breakpoint($desktop) {
