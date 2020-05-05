@@ -42,7 +42,8 @@
     @include breakpoint($desktop) {
       display: flex;
       justify-content: center;
-      margin: 75px 0 100px;
+      margin: 75px auto 100px;
+      max-width: 1400px;
     }
   }
 
@@ -80,6 +81,11 @@
 
   .tech-skills {
     width: 100%;
+
+    @include breakpoint($desktop) {
+      flex-basis: 33%;
+    }
+
     &.animate {
       .bar {
         animation: animatedWidth 1s ease-in-out;
@@ -95,9 +101,8 @@
 
     .bar {
       --stagger-delay: 100ms;
-      border: 1px solid black;
-      border-radius: 5px;
-      height: 40px;
+      --top-percent: 100;
+      height: 35px;
       margin-bottom: 5px;
       position: relative;
       width: 100%;
@@ -106,48 +111,77 @@
         max-width: 500px;
       }
 
-      &:nth-child(1) {
+      &:nth-of-type(1) {
         animation-delay: calc(1 * var(--stagger-delay));
+
+        span {
+          width: 100%;
+        }
       }
 
-      &:nth-child(2) {
+      &:nth-of-type(2) {
         animation-delay: calc(2 * var(--stagger-delay));
+
+        span {
+          width: 100%;
+        }
       }
 
-      &:nth-child(3) {
+      &:nth-of-type(3) {
         animation-delay: calc(3 * var(--stagger-delay));
+
+        span {
+          width: 100%;
+        }
       }
 
-      &:nth-child(4) {
+      &:nth-of-type(4) {
         animation-delay: calc(4 * var(--stagger-delay));
+
+        span {
+          width: 70%;
+        }
       }
 
-      &:nth-child(5) {
+      &:nth-of-type(5) {
         animation-delay: calc(5 * var(--stagger-delay));
+
+        span {
+          width: 70%;
+        }
       }
 
-      &:nth-child(6) {
+      &:nth-of-type(6) {
         animation-delay: calc(6 * var(--stagger-delay));
+
+        span {
+          width: 70%;
+        }
       }
 
-      &:nth-child(7) {
+      &:nth-of-type(7) {
         animation-delay: calc(7 * var(--stagger-delay));
+
+        span {
+          width: 40%;
+        }
       }
 
-      &:nth-child(8) {
+      &:nth-of-type(8) {
         animation-delay: calc(8 * var(--stagger-delay));
-      }
 
-      &:last-child {
-        animation-delay: calc(9 * var(--stagger-delay));
+        span {
+          width: 40%;
+        }
       }
     }
 
     span {
-      background: $main-pink;
+      background: black;
       color: white;
       height: 100%;
-      padding: 10px;
+      overflow: hidden;
+      padding: 9px 13px;
       position: absolute;
       width: 75%;
       transition: width 0.5s ease;
