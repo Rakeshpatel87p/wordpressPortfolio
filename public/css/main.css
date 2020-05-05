@@ -33,7 +33,8 @@
       .about .wrapper {
         display: flex;
         justify-content: center;
-        margin: 75px 0 100px; } }
+        margin: 75px auto 100px;
+        max-width: 1400px; } }
   .about p {
     font-family: "Open Sans", sans-serif;
     margin-bottom: 50px;
@@ -59,6 +60,9 @@
     width: 100%; } }
   .about .tech-skills {
     width: 100%; }
+    @media only screen and (min-width: 960px) {
+      .about .tech-skills {
+        flex-basis: 33%; } }
     .about .tech-skills.animate .bar {
       animation: animatedWidth 1s ease-in-out;
       animation-fill-mode: forwards; }
@@ -68,38 +72,52 @@
       text-align: center; }
     .about .tech-skills .bar {
       --stagger-delay: 100ms;
-      border: 1px solid black;
-      border-radius: 5px;
-      height: 40px;
+      --top-percent: 100;
+      height: 35px;
       margin-bottom: 5px;
       position: relative;
       width: 100%; }
       @media only screen and (min-width: 960px) {
         .about .tech-skills .bar {
           max-width: 500px; } }
-      .about .tech-skills .bar:nth-child(1) {
+      .about .tech-skills .bar:nth-of-type(1) {
         animation-delay: calc(1 * var(--stagger-delay)); }
-      .about .tech-skills .bar:nth-child(2) {
+        .about .tech-skills .bar:nth-of-type(1) span {
+          width: 100%; }
+      .about .tech-skills .bar:nth-of-type(2) {
         animation-delay: calc(2 * var(--stagger-delay)); }
-      .about .tech-skills .bar:nth-child(3) {
+        .about .tech-skills .bar:nth-of-type(2) span {
+          width: 100%; }
+      .about .tech-skills .bar:nth-of-type(3) {
         animation-delay: calc(3 * var(--stagger-delay)); }
-      .about .tech-skills .bar:nth-child(4) {
+        .about .tech-skills .bar:nth-of-type(3) span {
+          width: 100%; }
+      .about .tech-skills .bar:nth-of-type(4) {
         animation-delay: calc(4 * var(--stagger-delay)); }
-      .about .tech-skills .bar:nth-child(5) {
+        .about .tech-skills .bar:nth-of-type(4) span {
+          width: 70%; }
+      .about .tech-skills .bar:nth-of-type(5) {
         animation-delay: calc(5 * var(--stagger-delay)); }
-      .about .tech-skills .bar:nth-child(6) {
+        .about .tech-skills .bar:nth-of-type(5) span {
+          width: 70%; }
+      .about .tech-skills .bar:nth-of-type(6) {
         animation-delay: calc(6 * var(--stagger-delay)); }
-      .about .tech-skills .bar:nth-child(7) {
+        .about .tech-skills .bar:nth-of-type(6) span {
+          width: 70%; }
+      .about .tech-skills .bar:nth-of-type(7) {
         animation-delay: calc(7 * var(--stagger-delay)); }
-      .about .tech-skills .bar:nth-child(8) {
+        .about .tech-skills .bar:nth-of-type(7) span {
+          width: 40%; }
+      .about .tech-skills .bar:nth-of-type(8) {
         animation-delay: calc(8 * var(--stagger-delay)); }
-      .about .tech-skills .bar:last-child {
-        animation-delay: calc(9 * var(--stagger-delay)); }
+        .about .tech-skills .bar:nth-of-type(8) span {
+          width: 40%; }
     .about .tech-skills span {
-      background: #e31b6d;
+      background: black;
       color: white;
       height: 100%;
-      padding: 10px;
+      overflow: hidden;
+      padding: 9px 13px;
       position: absolute;
       width: 75%;
       transition: width 0.5s ease; }
@@ -110,12 +128,17 @@
   height: 100%;
   padding: 100px 20px 50px; }
   .clients-served h3 {
-    color: #e31b6d;
+    color: white;
+    font-family: "Work Sans", sans-serif;
+    font-size: 25px;
     font-weight: normal;
     letter-spacing: 1.25px;
     margin-bottom: 50px;
     text-align: center;
     text-transform: uppercase; }
+    @media only screen and (min-width: 960px) {
+      .clients-served h3 {
+        display: none; } }
   .clients-served .container {
     display: flex;
     flex-wrap: wrap;
@@ -389,7 +412,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 70vh;
+  height: 100vh;
   overflow: hidden;
   width: 100%; }
   @media only screen and (min-width: 960px) {
@@ -452,34 +475,39 @@ header {
   animation: slideIn 1s forwards;
   animation-delay: 1s;
   background: black;
-  bottom: 0;
+  bottom: 10px;
   color: white;
-  display: none;
   justify-content: space-between;
   opacity: 0;
   position: absolute;
   text-align: left;
   transition: all 0.5s ease-in-out;
-  width: 15%;
+  width: 55%;
   z-index: 100000; }
   @media only screen and (min-width: 960px) {
     .navBar {
-      display: flex; } }
+      bottom: 0;
+      display: flex;
+      width: 15%; } }
   .navBar.expand {
     padding: 0 20px;
     width: 100%; }
     @media only screen and (min-width: 960px) {
       .navBar.expand {
         padding: 0 150px; } }
-    .navBar.expand ul {
-      display: flex;
-      opacity: 1; }
+    @media only screen and (min-width: 960px) {
+      .navBar.expand ul {
+        display: flex;
+        opacity: 1; } }
   .navBar.fixed {
     box-shadow: 0px 1px 6px #e31b6d;
-    height: 100px;
+    height: 85px;
     position: fixed;
     top: 0;
     width: 100%; }
+    @media only screen and (min-width: 960px) {
+      .navBar.fixed {
+        height: 100px; } }
 
 @keyframes slideIn {
   0% {
@@ -489,11 +517,11 @@ header {
     right: 0;
     opacity: 1; } }
   .navBar .info {
-    display: none;
-    padding: 20px; }
+    padding: 10px 20px; }
     @media only screen and (min-width: 960px) {
       .navBar .info {
-        display: block; } }
+        display: block;
+        padding: 20px; } }
   .navBar h1 {
     font-size: 30px;
     font-weight: 100; }
@@ -534,7 +562,7 @@ body {
 .skill-set {
   color: black; }
   .skill-set .container {
-    padding: 50px 24px;
+    padding: 50px 24px 0;
     border-bottom: 24px solid black;
     border-left: 16px solid black;
     border-right: 16px solid black;
@@ -568,7 +596,7 @@ body {
         color: blue; }
   .skill-set ul {
     font-family: "Open Sans", sans-serif;
-    margin: 30px auto;
+    margin: 30px auto 0;
     padding: 0; }
     @media only screen and (min-width: 960px) {
       .skill-set ul {
