@@ -123,7 +123,7 @@
       transition: width 0.5s ease; }
 
 .clients-served {
-  background: orange;
+  background: black;
   color: white;
   height: 100%;
   padding: 100px 20px 50px; }
@@ -251,6 +251,56 @@
       .clients-served a .overlay p {
         letter-spacing: 0.8px;
         line-height: 1.16667; }
+
+.contact-form {
+  background: black;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  margin: 24px;
+  padding: 50px 24px; }
+  @media only screen and (min-width: 960px) {
+    .contact-form {
+      margin: 150px auto;
+      max-width: 800px; } }
+  .contact-form form {
+    margin: auto;
+    max-width: 500px; }
+  .contact-form h3 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-align: center; }
+    @media only screen and (min-width: 960px) {
+      .contact-form h3 {
+        font-size: 50px; } }
+  .contact-form div {
+    margin-bottom: 25px; }
+  .contact-form textarea,
+  .contact-form input {
+    font-size: 15px;
+    height: 35px;
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%; }
+  .contact-form textarea {
+    min-height: 150px; }
+  .contact-form button {
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s background ease-in;
+    width: 100%; }
+    .contact-form button:hover {
+      background: #e31b6d; }
+    @media only screen and (min-width: 960px) {
+      .contact-form button {
+        display: flex;
+        width: auto; } }
 
 footer {
   height: 100%;
@@ -584,6 +634,7 @@ body {
       .skill-set h2 {
         margin-bottom: 60px; } }
     .skill-set h2 a {
+      color: #551a8b;
       text-decoration: none; }
     .skill-set h2 .underline--magical {
       background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
