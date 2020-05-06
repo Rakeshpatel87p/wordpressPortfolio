@@ -31,10 +31,25 @@
     <p>UI Developer</p>
   </div>
   <ul>
-    <li>About</li>
-    <li>Tools</li>
-    <li>Portfolio</li>
-    <li>Contact</li>
+    
+    <li>
+      <a href="#about">
+        ABOUT
+      </a>
+    </li>
+    
+    <li>
+      <a href="#portfolio">
+        PORTFOLIO
+      </a>
+    </li>
+    
+    <li>
+      <a href="#contact">
+        CONTACT
+      </a>
+    </li>
+    
   </ul>
 </nav>
 <script>
@@ -63,6 +78,17 @@
       }
     })
   })
+</script>
+<script>
+  const navBar = document.querySelector('.navBar');
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+      });
+    });
+  });
 </script>
 
   <header>
@@ -211,7 +237,10 @@
     <div class="triangle"></div>
 </section>
 
-<section class="about">
+<section
+  id="about"
+  class="about"
+>
   <div class="personal-photo">
     <img
       src="img/Rakesh caricature.jpg"
@@ -252,13 +281,17 @@
   </div>
 </section>
 
-<section class="clients-served">
+<section
+  id="portfolio"
+  class="clients-served"
+>
   <h3>Portfolio</h3>
   <div class="container">
     
     <a href="">
       <div
         class="img"
+        t
         style="background-image: url('img/portfolio/cfaImg.jpg')"
       ></div>
       <div class="overlay">
@@ -270,6 +303,7 @@
     <a href="">
       <div
         class="img"
+        t
         style="background-image: url('img/portfolio/schwinn.jpg')"
       ></div>
       <div class="overlay">
@@ -281,6 +315,7 @@
     <a href="">
       <div
         class="img"
+        t
         style="background-image: url('img/portfolio/hfe.jpg')"
       ></div>
       <div class="overlay">
@@ -292,6 +327,7 @@
     <a href="">
       <div
         class="img"
+        t
         style="background-image: url('img/portfolio/coxMedia.jpg')"
       ></div>
       <div class="overlay">
@@ -303,6 +339,7 @@
     <a href="">
       <div
         class="img"
+        t
         style="background-image: url('img/portfolio/onlineStore.jpg')"
       ></div>
       <div class="overlay">
@@ -314,6 +351,7 @@
     <a href="">
       <div
         class="img"
+        t
         style="background-image: url('img/portfolio/productivityApp.jpg')"
       ></div>
       <div class="overlay">
@@ -325,6 +363,7 @@
     <a href="">
       <div
         class="img"
+        t
         style="background-image: url('img/portfolio/game.jpg')"
       ></div>
       <div class="overlay">
@@ -336,8 +375,14 @@
   </div>
 </section>
 
-<section class="contact-form">
-  <h3>Lets Chat</h3>
+<section
+  id="contact"
+  class="contact-form"
+>
+  <div class="header">
+    <h3>Lets Chat</h3>
+    <p>Reach out to connect or discuss collaborations</p>
+  </div>
   <form
     id="my-form"
     action="https://formspree.io/myynypdn"
@@ -411,6 +456,60 @@
     xhr.send(data);
   }
 </script>
+
+<footer>
+  <ul>
+    
+    <li>
+      <a
+        href="https://github.com/Rakeshpatel87p"
+        target="_blank"
+      >
+        <img
+          src="img/socialIcons/github.svg"
+          alt="github"
+        >
+      </a>
+    </li>
+    
+    <li>
+      <a
+        href="https://www.instagram.com/paprika_fuego/"
+        target="_blank"
+      >
+        <img
+          src="img/socialIcons/instagram.svg"
+          alt="instagram"
+        >
+      </a>
+    </li>
+    
+    <li>
+      <a
+        href="https://www.linkedin.com/in/rakeshpatel87p/"
+        target="_blank"
+      >
+        <img
+          src="img/socialIcons/linkedin.svg"
+          alt="linkedin"
+        >
+      </a>
+    </li>
+    
+    <li>
+      <a
+        href="https://twitter.com/Rakesh_R_Patel"
+        target="_blank"
+      >
+        <img
+          src="img/socialIcons/twitter.svg"
+          alt="twitter"
+        >
+      </a>
+    </li>
+    
+  </ul>
+</footer>
 
 
 </body>
