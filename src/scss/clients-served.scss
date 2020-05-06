@@ -1,10 +1,17 @@
 @import "_utils";
 
 .clients-served {
+  $side-border: 1px solid $main-pink;
   background: black;
+  //border: $side-border;
+  //border-right: $side-border;
   color: white;
   height: 100%;
   padding: 100px 20px 50px;
+
+  @include breakpoint($desktop) {
+    padding: 110px 20px;
+  }
 
   h3 {
     color: white;

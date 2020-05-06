@@ -8,7 +8,8 @@
   padding: 50px 24px;
 
   @include breakpoint($desktop) {
-    margin: 150px auto;
+    border-radius: 20px;
+    margin: 200px auto 50px;
     max-width: 800px;
   }
 
@@ -17,15 +18,28 @@
     max-width: 500px;
   }
 
-  h3 {
-    font-family: $primary-font;
-    font-size: 25px;
-    font-weight: 400;
-    margin-bottom: 40px;
-    text-align: center;
+  .header {
+    margin-bottom: 50px;
 
-    @include breakpoint($desktop) {
-      font-size: 50px;
+    h3 {
+      font-family: $primary-font;
+      font-size: 25px;
+      font-weight: 400;
+      letter-spacing: 0.8px;
+      margin-bottom: 20px;
+      text-align: center;
+
+      @include breakpoint($desktop) {
+        font-size: 50px;
+      }
+    }
+
+    p {
+      color: $main-pink;
+      font-size: 20px;
+      letter-spacing: 1px;
+      margin: auto;
+      text-align: center;
     }
   }
 
@@ -46,24 +60,31 @@
     min-height: 150px;
   }
 
+  label {
+    font-size: 20px;
+    letter-spacing: 0.8px;
+  }
+
   button {
     background: black;
     color: white;
     cursor: pointer;
-    font-size: 15px;
+    display: flex;
+    font-size: 20px;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     transition: 0.3s background ease-in;
-    width: 100%;
+    width: auto;
 
     &:hover {
       background: $main-pink;
     }
 
     @include breakpoint($desktop) {
-      display: flex;
-      width: auto;
+      justify-content: center;
+      padding: 20px;
+      width: 200px;
     }
   }
 }

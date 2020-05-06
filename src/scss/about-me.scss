@@ -7,7 +7,8 @@
 
   @include breakpoint($desktop) {
     align-items: center;
-    padding: 0 20px 0 0;
+    margin-top: 0;
+    padding: 100px 20px 0 0;
   }
 
   .personal-photo {
@@ -178,8 +179,10 @@
 
     span {
       background: black;
+      border-bottom: 3px solid $main-pink;
       color: white;
       height: 100%;
+      letter-spacing: 2px;
       overflow: hidden;
       padding: 9px 13px;
       position: absolute;
