@@ -100,15 +100,21 @@
     transition: opacity 10s ease;
 
     li {
+      $selected-elem: 3px solid $main-pink;
       border-bottom: 0;
       cursor: pointer;
       font-size: 20px;
       list-style-type: none;
       margin-right: 50px;
       padding-bottom: 5px;
+      transition: border 100ms ease-in;
 
       &:hover {
-        border-bottom: 1px solid $main-pink;
+        border-bottom: $selected-elem;
+      }
+
+      &.selected {
+        border-bottom: $selected-elem;
       }
     }
 
