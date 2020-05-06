@@ -45,6 +45,15 @@
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
+      //rmv selected class from other selected element
+      document.querySelectorAll('.navBar ul li').forEach(item => {
+        if (item.className.includes('selected')) {
+          item.classList.remove('selected');
+        }
+      });
+
+      //apply selected class to this class
+      anchor.parentNode.classList.add('selected');
       document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth',
       });
