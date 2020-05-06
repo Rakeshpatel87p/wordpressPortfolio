@@ -60,3 +60,19 @@
     });
   });
 </script>
+<script>
+  //using waypoint
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.animate').forEach(item => {
+      new Waypoint({
+        element: item,
+        handler: function (direction) {
+          //find corresponding navBar elem to underline effect
+          console.log(this.element.id)
+        }
+      })
+    })
+
+  })
+
+</script>
