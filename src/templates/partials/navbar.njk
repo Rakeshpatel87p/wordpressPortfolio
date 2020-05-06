@@ -4,10 +4,13 @@
     <p>UI Developer</p>
   </div>
   <ul>
-    <li>About</li>
-    <li>Tools</li>
-    <li>Portfolio</li>
-    <li>Contact</li>
+    {% for nav in navigation %}
+    <li>
+      <a href="{{ nav.href }}">
+        {{ nav.title | upper }}
+      </a>
+    </li>
+    {% endfor %}
   </ul>
 </nav>
 <script>
@@ -36,4 +39,15 @@
       }
     })
   })
+</script>
+<script>
+  const navBar = document.querySelector('.navBar');
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+      });
+    });
+  });
 </script>

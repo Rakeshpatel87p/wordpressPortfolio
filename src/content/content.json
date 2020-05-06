@@ -1,4 +1,9 @@
 {
+  "navigation": [
+    { "title": "about", "href": "#about" },
+    { "title": "portfolio", "href": "#portfolio" },
+    { "title": "contact", "href": "#contact" }
+  ],
   "projects": [
     {
       "name": "Chick-fil-A",
@@ -55,6 +60,28 @@
     {
       "skill": "Responsive and fun iterative process.",
       "img": "img/friends.png"
+    }
+  ],
+  "socialIcons": [
+    {
+      "name": "github",
+      "icon": "img/socialIcons/github.svg",
+      "href": "https://github.com/Rakeshpatel87p"
+    },
+    {
+      "name": "instagram",
+      "icon": "img/socialIcons/instagram.svg",
+      "href": "https://www.instagram.com/paprika_fuego/"
+    },
+    {
+      "name": "linkedin",
+      "icon": "img/socialIcons/linkedin.svg",
+      "href": "https://www.linkedin.com/in/rakeshpatel87p/"
+    },
+    {
+      "name": "twitter",
+      "icon": "img/socialIcons/twitter.svg",
+      "href": "https://twitter.com/Rakesh_R_Patel"
     }
   ],
   "techSkills": [
