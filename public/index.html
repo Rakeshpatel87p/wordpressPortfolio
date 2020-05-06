@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-  <meta
-    http-equiv="X-UA-Compatible"
-    content="ie=edge"
-  />
-  <title>Rakesh Patel Portfolio</title>
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300i&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="css/main.css"
-  />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="ie=edge"
+    />
+    <title>Rakesh Patel Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300i&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="css/main.css"
+    />
+  </head>
 
-<body>
-
+  <body>
+    
 
 <nav class="navBar">
   <div class="info">
@@ -84,41 +84,38 @@
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
+      //rmv selected class from other selected element
+      document.querySelectorAll('.navBar ul li').forEach(item => {
+        if (item.className.includes('selected')) {
+          item.classList.remove('selected');
+        }
+      });
+
+      //apply selected class to this class
+      anchor.parentNode.classList.add('selected');
       document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth',
       });
     });
   });
 </script>
+<script>
+  //using waypoint
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.animate').forEach(item => {
+      new Waypoint({
+        element: item,
+        handler: function (direction) {
+          //find corresponding navBar elem to underline effect
+          console.log(this.element.id)
+        }
+      })
+    })
 
-  <header>
-    <div class="title">
-      <h2>Rakesh</h2>
-      <h3>A Web Developer</h3>
-    </div>
-    <ul class="social-icons">
-      <li><img
-          src="img/socialIcons/inbox.svg"
-          alt="email"
-        /></li>
-      <li><img
-          src="img/socialIcons/github.svg"
-          alt="github"
-        /></li>
-      <li><img
-          src="img/socialIcons/linkedin.svg"
-          alt="linkedin"
-        /></li>
-      <li><img
-          src="img/socialIcons/instagram.svg"
-          alt="instagram"
-        /></li>
-      <li><img
-          src="img/socialIcons/twitter.svg"
-          alt="twitter"
-        /></li>
-    </ul>
-</header>
+  })
+
+</script>
+
 <section class="hero">
   <canvas id="c"></canvas>
   <div class="painting"></div>
@@ -239,7 +236,7 @@
 
 <section
   id="about"
-  class="about"
+  class="about animate"
 >
   <div class="personal-photo">
     <img
@@ -283,7 +280,7 @@
 
 <section
   id="portfolio"
-  class="clients-served"
+  class="clients-served animate"
 >
   <h3>Portfolio</h3>
   <div class="container">
@@ -377,7 +374,7 @@
 
 <section
   id="contact"
-  class="contact-form"
+  class="contact-form animate"
 >
   <div class="header">
     <h3>Lets Chat</h3>
@@ -512,11 +509,11 @@
 </footer>
 
 
-</body>
-<script src="js/uiEffects.js"></script>
-<script src="js/color-circle.js"></script>
-<!-- <script src="js/mixitup_plugin.js"></script>
-<script src="js/mixitup.js"></script> -->
-<script src="js/RevolvingCircle.js"></script>
+
+  </body>
+  <script
+    type="text/javascript"
+    src="js/noframework.waypoints.min.js"
+  ></script>
 
 </html>
