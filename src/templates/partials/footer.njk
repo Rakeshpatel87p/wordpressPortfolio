@@ -1,7 +1,17 @@
 <footer>
   <ul>
-    <li></li>
-    <li></li>
-    <li></li>
+    {% for socialIcon in socialIcons%}
+    <li>
+      <a
+        href="{{socialIcon.href}}"
+        target="_blank"
+      >
+        <img
+          src="{{socialIcon.icon}}"
+          alt="{{socialIcon.name}}"
+        >
+      </a>
+    </li>
+    {% endfor %}
   </ul>
 </footer>
