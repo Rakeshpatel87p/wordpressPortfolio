@@ -33,19 +33,28 @@
   <ul>
     
     <li>
-      <a href="#about">
+      <a
+        data-link-to=#about
+        href="#about"
+      >
         ABOUT
       </a>
     </li>
     
     <li>
-      <a href="#portfolio">
+      <a
+        data-link-to=#portfolio
+        href="#portfolio"
+      >
         PORTFOLIO
       </a>
     </li>
     
     <li>
-      <a href="#contact">
+      <a
+        data-link-to=#contact
+        href="#contact"
+      >
         CONTACT
       </a>
     </li>
@@ -80,41 +89,119 @@
   })
 </script>
 <script>
-  const navBar = document.querySelector('.navBar');
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      //rmv selected class from other selected element
-      document.querySelectorAll('.navBar ul li').forEach(item => {
+
+  class NavBar {
+    constructor() {
+      this.navLi = document.querySelectorAll('.navBar ul li');
+      this.navLinks = document.querySelectorAll('a[href^="#"]')
+      this.addClickEvent();
+      this.handleUnderLineEffect();
+    }
+
+    handleUnderLineEffect() {
+      //get top positions for each link
+      //add scroll event
+      window.addEventListener("scroll", () => {
+        this.offsetTopVals.forEach((topHeight) => {
+          console.table({ topHeight })
+          console.log(window.pageYOffset);
+          const topOfDiv = topHeight.offsetTop;
+          const bottomOfDiv = topHeight.offsetTop + topHeight.height;
+
+          if (topOfDiv < window.pageYOffset && window.pageYOffset < bottomOfDiv) {
+            this.removeLinkUnderline();
+            console.log(window.pageYOffset);
+            const linkToHighlight = document.querySelector(`a[href='${topHeight.linkTo}']`)
+            linkToHighlight.parentNode.classList.add('selected');
+          }
+
+        })
+      })
+    }
+
+    get offsetTopVals() {
+      const topHeights = [];
+      this.navLinks.forEach(link => {
+        const linkTo = link.dataset.linkTo.slice(1, link.dataset.linkTo.length)
+        const elemToScrollTo = document.getElementById(linkTo);
+        const offsetTop = elemToScrollTo.offsetTop - 300;
+        const height = elemToScrollTo.offsetHeight - 300;
+        topHeights.push({ linkTo: link.dataset.linkTo, offsetTop, height });
+      })
+      console.table(topHeights)
+      return topHeights
+    }
+
+    addClickEvent() {
+      this.navLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          this.removeLinkUnderline();
+          this.addLinkUnderline(link);
+          this.scrollIntoView(link);
+        })
+      })
+    }
+
+    removeLinkUnderline() {
+      this.navLi.forEach(item => {
         if (item.className.includes('selected')) {
           item.classList.remove('selected');
         }
-      });
+      })
+    }
 
-      //apply selected class to this class
-      anchor.parentNode.classList.add('selected');
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
+    addLinkUnderline(link) {
+      link.parentNode.classList.add('selected');
+    }
+
+    scrollIntoView(link) {
+      document.querySelector(link.getAttribute('href')).scrollIntoView({
         behavior: 'smooth',
       });
-    });
-  });
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    new NavBar();
+  })
 </script>
-<script>
+<!-- <script>
   //using waypoint
   window.addEventListener("DOMContentLoaded", () => {
+    new NavBar()
+    const navBarLinks = [...document.querySelectorAll('.navBar ul li a')]
+
     document.querySelectorAll('.animate').forEach(item => {
       new Waypoint({
         element: item,
         handler: function (direction) {
-          //find corresponding navBar elem to underline effect
-          console.log(this.element.id)
-        }
+          console.log('scrolled into view')
+          removeUnderline(navBarLinks);
+          addUnderlineEffect(navBarLinks, item);
+        },
+        offset: 100
       })
     })
 
   })
 
-</script>
+  function removeUnderline(navBarLinks) {
+    navBarLinks.forEach((link) => {
+      if (link.parentNode.className.includes('selected')) {
+        return link.parentNode.classList.remove('selected')
+      }
+    })
+  };
+
+  function addUnderlineEffect(navBarLinks, item) {
+    const linkToUnderline = navBarLinks.find(link => link.dataset.linkTo === `#${item.id}`)
+    if (linkToUnderline) {
+      linkToUnderline.parentNode.classList.add('selected');
+    }
+  }
+
+</script> -->
 
 <section class="hero">
   <canvas id="c"></canvas>
@@ -175,7 +262,7 @@
 
 </script>
 
-<section class="skill-set">
+<section class="skill-set animate">
     <div class="container">
         <h2>
             Combining
