@@ -63,60 +63,14 @@
 </nav>
 <script>
 
-  window.addEventListener('DOMContentLoaded', () => {
-    const navBar = document.querySelector('.navBar');
-    const navBarTop = navBar.offsetTop - 100;
-
-    const personalPhoto = document.querySelector('.personal-photo');
-    const personalPhotoTop = personalPhoto.offsetTop;
-
-    const skills = document.querySelector('.tech-skills');
-
-    window.addEventListener("scroll", () => {
-      //console.log(navBar);
-      if (navBarTop < window.scrollY) {
-        navBar.classList.add('fixed');
-        navBar.classList.add('expand')
-      } else {
-        navBar.classList.remove('fixed');
-        navBar.classList.remove('expand')
-      }
-
-      if (personalPhotoTop < window.scrollY) {
-        skills.classList.add('animate')
-      }
-    })
-  })
-</script>
-<script>
-
   class NavBar {
     constructor() {
+      this.navBar = document.querySelector('.navBar')
+      this.navBarTop = this.navBar.offsetTop - 100;
       this.navLi = document.querySelectorAll('.navBar ul li');
       this.navLinks = document.querySelectorAll('a[href^="#"]')
       this.addClickEvent();
-      this.handleUnderLineEffect();
-    }
-
-    handleUnderLineEffect() {
-      //get top positions for each link
-      //add scroll event
-      window.addEventListener("scroll", () => {
-        this.offsetTopVals.forEach((topHeight) => {
-          console.table({ topHeight })
-          console.log(window.pageYOffset);
-          const topOfDiv = topHeight.offsetTop;
-          const bottomOfDiv = topHeight.offsetTop + topHeight.height;
-
-          if (topOfDiv < window.pageYOffset && window.pageYOffset < bottomOfDiv) {
-            this.removeLinkUnderline();
-            console.log(window.pageYOffset);
-            const linkToHighlight = document.querySelector(`a[href='${topHeight.linkTo}']`)
-            linkToHighlight.parentNode.classList.add('selected');
-          }
-
-        })
-      })
+      this.addScrollEvent();
     }
 
     get offsetTopVals() {
@@ -128,7 +82,6 @@
         const height = elemToScrollTo.offsetHeight - 300;
         topHeights.push({ linkTo: link.dataset.linkTo, offsetTop, height });
       })
-      console.table(topHeights)
       return topHeights
     }
 
@@ -143,16 +96,25 @@
       })
     }
 
-    removeLinkUnderline() {
-      this.navLi.forEach(item => {
-        if (item.className.includes('selected')) {
-          item.classList.remove('selected');
-        }
+    addScrollEvent() {
+      window.addEventListener("scroll", () => {
+        this.handleUnderLineEffect();
+        this.handleNavBarEffect();
       })
     }
 
     addLinkUnderline(link) {
       link.parentNode.classList.add('selected');
+      return
+    }
+
+    removeLinkUnderline() {
+      this.navLi.forEach(item => {
+        if (item.className.includes('selected')) {
+          item.classList.remove('selected');
+          return
+        }
+      })
     }
 
     scrollIntoView(link) {
@@ -160,48 +122,38 @@
         behavior: 'smooth',
       });
     }
-  }
 
-  window.addEventListener("DOMContentLoaded", () => {
-    new NavBar();
-  })
-</script>
-<!-- <script>
-  //using waypoint
-  window.addEventListener("DOMContentLoaded", () => {
-    new NavBar()
-    const navBarLinks = [...document.querySelectorAll('.navBar ul li a')]
+    handleUnderLineEffect() {
+      this.offsetTopVals.forEach((topHeight) => {
+        const topOfDiv = topHeight.offsetTop;
+        const bottomOfDiv = topHeight.offsetTop + topHeight.height;
 
-    document.querySelectorAll('.animate').forEach(item => {
-      new Waypoint({
-        element: item,
-        handler: function (direction) {
-          console.log('scrolled into view')
-          removeUnderline(navBarLinks);
-          addUnderlineEffect(navBarLinks, item);
-        },
-        offset: 100
+        if (topOfDiv < window.pageYOffset && window.pageYOffset < bottomOfDiv) {
+          this.removeLinkUnderline();
+          const linkToHighlight = document.querySelector(`a[href='${topHeight.linkTo}']`)
+          this.addLinkUnderline(linkToHighlight)
+        }
+
       })
-    })
+    }
 
-  })
-
-  function removeUnderline(navBarLinks) {
-    navBarLinks.forEach((link) => {
-      if (link.parentNode.className.includes('selected')) {
-        return link.parentNode.classList.remove('selected')
+    handleNavBarEffect() {
+      if (this.navBarTop < window.scrollY) {
+        this.navBar.classList.add('fixed');
+        this.navBar.classList.add('expand')
+      } else {
+        this.navBar.classList.remove('fixed');
+        this.navBar.classList.remove('expand')
       }
-    })
-  };
-
-  function addUnderlineEffect(navBarLinks, item) {
-    const linkToUnderline = navBarLinks.find(link => link.dataset.linkTo === `#${item.id}`)
-    if (linkToUnderline) {
-      linkToUnderline.parentNode.classList.add('selected');
     }
   }
 
-</script> -->
+  window.addEventListener("DOMContentLoaded", () => {
+    if (window.innerWidth > 960) {
+      new NavBar();
+    }
+  })
+</script>
 
 <section class="hero">
   <canvas id="c"></canvas>
