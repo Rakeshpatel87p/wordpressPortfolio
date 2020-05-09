@@ -164,20 +164,17 @@
   from {
     opacity: 0;
     pointer-events: none;
-    transform: scale(0.3);
-    filter: hue-rotate(180deg);
-    width: 0; }
+    transform: scale(0.3); }
   to {
     opacity: 1;
     pointer-events: visible;
-    transform: scale(1);
-    filter: hue-rotate(0deg);
-    width: 100%; } }
+    transform: scale(1); } }
   .clients-served a {
     opacity: 0;
     text-decoration: none;
     margin-bottom: 40px;
     transition: ease-in-out all 0.3s;
+    transform: translateX(0);
     width: 100%; }
     @media only screen and (min-width: 960px) {
       .clients-served a {
@@ -185,7 +182,7 @@
         position: relative;
         margin: 0; }
         .clients-served a:hover {
-          transform: translateX(-5px);
+          transform: translateX(-15px);
           z-index: 1; }
           .clients-served a:hover .img {
             opacity: 1; }
@@ -194,9 +191,8 @@
             opacity: 1;
             right: 0; } }
     .clients-served a.cardEntrance {
-      animation: cardEntrance 500ms ease-out;
-      animation-fill-mode: forwards;
-      display: block; }
+      animation: cardEntrance 700ms ease-out;
+      animation-fill-mode: forwards; }
     .clients-served a:nth-child(1) {
       grid-area: a;
       animation-delay: calc(1 * var(--stagger-delay)); }
@@ -266,17 +262,23 @@
         line-height: 1.16667; }
 
 .contact-form {
-  background: black;
-  border-bottom: 5px solid #e31b6d;
   color: white;
-  font-family: "Open Sans", sans-serif;
-  margin: 24px;
-  padding: 50px 24px; }
-  @media only screen and (min-width: 960px) {
-    .contact-form {
-      border-radius: 20px;
-      margin: 200px auto 50px;
-      max-width: 800px; } }
+  font-family: "Open Sans", sans-serif; }
+  .contact-form .wrapper {
+    background: black;
+    border-bottom: 5px solid #e31b6d;
+    border-radius: 10px;
+    margin: 24px;
+    padding: 50px 24px;
+    transform: scale(0.8);
+    transition: transform 500ms ease-in-out; }
+    @media only screen and (min-width: 960px) {
+      .contact-form .wrapper {
+        border-radius: 20px;
+        margin: 200px auto 50px;
+        max-width: 800px; } }
+    .contact-form .wrapper.scaleAnim {
+      transform: scale(1); }
   .contact-form form {
     margin: auto;
     max-width: 500px; }
