@@ -1,36 +1,40 @@
 <section
   id="contact"
   class="contact-form animate"
+  data-animated-element=".wrapper"
+  data-animate-class="scaleAnim"
 >
-  <div class="header">
-    <h3>Lets Chat</h3>
-    <p>Reach out to connect or discuss collaborations</p>
+  <div class="wrapper">
+    <div class="header">
+      <h3>Lets Chat</h3>
+      <p>Reach out to connect or discuss collaborations</p>
+    </div>
+    <form
+      id="my-form"
+      action="https://formspree.io/myynypdn"
+      method="POST"
+    >
+      <div>
+        <label>Your Email</label>
+        <input
+          type="email"
+          name="email"
+          required
+        />
+      </div>
+      <div>
+        <label>Message</label>
+        <textarea
+          name="message"
+          cols="30"
+          rows="10"
+          required
+        ></textarea>
+      </div>
+      <button id="my-form-button">Submit</button>
+      <p id="my-form-status"></p>
+    </form>
   </div>
-  <form
-    id="my-form"
-    action="https://formspree.io/myynypdn"
-    method="POST"
-  >
-    <div>
-      <label>Your Email</label>
-      <input
-        type="email"
-        name="email"
-        required
-      />
-    </div>
-    <div>
-      <label>Message</label>
-      <textarea
-        name="message"
-        cols="30"
-        rows="10"
-        required
-      ></textarea>
-    </div>
-    <button id="my-form-button">Submit</button>
-    <p id="my-form-status"></p>
-  </form>
 </section>
 <script>
   window.addEventListener("DOMContentLoaded", function () {

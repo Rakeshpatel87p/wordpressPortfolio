@@ -1,17 +1,27 @@
 @import "_utils";
 
 .contact-form {
-  background: black;
-  border-bottom: 5px solid $main-pink;
   color: white;
   font-family: $secondary-font;
-  margin: 24px;
-  padding: 50px 24px;
 
-  @include breakpoint($desktop) {
-    border-radius: 20px;
-    margin: 200px auto 50px;
-    max-width: 800px;
+  .wrapper {
+    background: black;
+    border-bottom: 5px solid $main-pink;
+    border-radius: 10px;
+    margin: 24px;
+    padding: 50px 24px;
+    transform: scale(0.8);
+    transition: transform 500ms ease-in-out;
+
+    @include breakpoint($desktop) {
+      border-radius: 20px;
+      margin: 200px auto 50px;
+      max-width: 800px;
+    }
+
+    &.scaleAnim {
+      transform: scale(1);
+    }
   }
 
   form {
