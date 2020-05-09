@@ -64,7 +64,7 @@
     @media only screen and (min-width: 960px) {
       .about .tech-skills {
         flex-basis: 33%; } }
-    .about .tech-skills.animate .bar {
+    .about .tech-skills.fadeIn .bar {
       animation: animatedWidth 1s ease-in-out;
       animation-fill-mode: forwards; }
     .about .tech-skills h2 {
@@ -163,15 +163,18 @@
 @keyframes cardEntrance {
   from {
     opacity: 0;
+    pointer-events: none;
     transform: scale(0.3);
-    filter: hue-rotate(180deg); }
+    filter: hue-rotate(180deg);
+    width: 0; }
   to {
     opacity: 1;
+    pointer-events: visible;
     transform: scale(1);
-    filter: hue-rotate(0deg); } }
+    filter: hue-rotate(0deg);
+    width: 100%; } }
   .clients-served a {
-    animation: cardEntrance 700ms ease-out;
-    animation-fill-mode: backwards;
+    opacity: 0;
     text-decoration: none;
     margin-bottom: 40px;
     transition: ease-in-out all 0.3s;
@@ -190,6 +193,10 @@
             box-shadow: 6px 9px 20px -11px #e31b6d;
             opacity: 1;
             right: 0; } }
+    .clients-served a.cardEntrance {
+      animation: cardEntrance 500ms ease-out;
+      animation-fill-mode: forwards;
+      display: block; }
     .clients-served a:nth-child(1) {
       grid-area: a;
       animation-delay: calc(1 * var(--stagger-delay)); }

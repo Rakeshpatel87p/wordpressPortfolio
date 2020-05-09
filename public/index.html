@@ -154,6 +154,41 @@
     }
   })
 </script>
+<script>
+  class WaypointAnim {
+    constructor() {
+      this.animElems.forEach(elem => this.createWaypointInstance(elem))
+    }
+
+    get animElems() {
+      return document.querySelectorAll('.animate')
+    }
+
+    getAnimInfo(elem) {
+      const elemToAnimate = elem.dataset.animatedElement;
+      const animClass = elem.dataset.animateClass;
+
+      return { elemToAnimate, animClass }
+    }
+
+    createWaypointInstance(elem) {
+      const elemAnimDetails = this.getAnimInfo(elem)
+
+      new Waypoint({
+        element: elem,
+        handler: function (direction) {
+          console.log('add anim class')
+          elem.querySelectorAll(elemAnimDetails.elemToAnimate).forEach(item => item.classList.add(elemAnimDetails.animClass))
+        },
+        offset: 500
+      })
+    }
+  }
+  window.addEventListener("DOMContentLoaded", () => {
+    new WaypointAnim();
+  })
+
+</script>
 
 <section class="hero">
   <canvas id="c"></canvas>
@@ -276,6 +311,8 @@
 <section
   id="about"
   class="about animate"
+  data-animated-element=".tech-skills"
+  data-animate-class="fadeIn"
 >
   <div class="personal-photo">
     <img
@@ -320,6 +357,8 @@
 <section
   id="portfolio"
   class="clients-served animate"
+  data-animated-element="a"
+  data-animate-class="cardEntrance"
 >
   <h3>Portfolio</h3>
   <div class="container">
@@ -327,7 +366,6 @@
     <a href="">
       <div
         class="img"
-        t
         style="background-image: url('img/portfolio/cfaImg.jpg')"
       ></div>
       <div class="overlay">
@@ -339,7 +377,6 @@
     <a href="">
       <div
         class="img"
-        t
         style="background-image: url('img/portfolio/schwinn.jpg')"
       ></div>
       <div class="overlay">
@@ -351,7 +388,6 @@
     <a href="">
       <div
         class="img"
-        t
         style="background-image: url('img/portfolio/hfe.jpg')"
       ></div>
       <div class="overlay">
@@ -363,7 +399,6 @@
     <a href="">
       <div
         class="img"
-        t
         style="background-image: url('img/portfolio/coxMedia.jpg')"
       ></div>
       <div class="overlay">
@@ -375,7 +410,6 @@
     <a href="">
       <div
         class="img"
-        t
         style="background-image: url('img/portfolio/onlineStore.jpg')"
       ></div>
       <div class="overlay">
@@ -387,7 +421,6 @@
     <a href="">
       <div
         class="img"
-        t
         style="background-image: url('img/portfolio/productivityApp.jpg')"
       ></div>
       <div class="overlay">
@@ -399,7 +432,6 @@
     <a href="">
       <div
         class="img"
-        t
         style="background-image: url('img/portfolio/game.jpg')"
       ></div>
       <div class="overlay">
