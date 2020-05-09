@@ -104,9 +104,7 @@
   }
 
   window.addEventListener("DOMContentLoaded", () => {
-    if (window.innerWidth > 960) {
-      new NavBar();
-    }
+    new NavBar();
   })
 </script>
 <script>
@@ -132,7 +130,7 @@
       new Waypoint({
         element: elem,
         handler: function (direction) {
-          console.log('add anim class')
+          console.log('add anim class to ', elem)
           elem.querySelectorAll(elemAnimDetails.elemToAnimate).forEach(item => item.classList.add(elemAnimDetails.animClass))
         },
         offset: 500
