@@ -87,7 +87,7 @@
       flex-basis: 33%;
     }
 
-    &.animate {
+    &.fadeIn {
       .bar {
         animation: animatedWidth 1s ease-in-out;
         animation-fill-mode: forwards;

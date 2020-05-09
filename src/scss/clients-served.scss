@@ -53,19 +53,22 @@
   @keyframes cardEntrance {
     from {
       opacity: 0;
+      pointer-events: none;
       transform: scale(0.3);
       filter: hue-rotate(180deg);
+      width: 0;
     }
     to {
       opacity: 1;
+      pointer-events: visible;
       transform: scale(1);
       filter: hue-rotate(0deg);
+      width: 100%;
     }
   }
 
   a {
-    animation: cardEntrance 700ms ease-out;
-    animation-fill-mode: backwards;
+    opacity: 0;
     text-decoration: none;
     margin-bottom: 40px;
     transition: ease-in-out all 0.3s;
@@ -90,6 +93,12 @@
           right: 0;
         }
       }
+    }
+
+    &.cardEntrance {
+      animation: cardEntrance 500ms ease-out;
+      animation-fill-mode: forwards;
+      display: block;
     }
 
     &:nth-child(1) {
