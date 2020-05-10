@@ -7,6 +7,18 @@
       align-items: center;
       margin-top: 0;
       padding: 100px 20px 0 0; } }
+  .about .triangle {
+    border-left: 600px solid transparent;
+    display: none;
+    height: 0;
+    position: absolute;
+    transform: rotate(180deg);
+    width: 100%; }
+    @media only screen and (min-width: 960px) {
+      .about .triangle {
+        border-bottom: 200px solid black;
+        border-right: 525px solid transparent;
+        display: block; } }
   .about .personal-photo {
     border: 1px dashed black;
     border-bottom: 2px solid black;
@@ -20,7 +32,7 @@
     width: 310px; }
     @media only screen and (min-width: 960px) {
       .about .personal-photo {
-        margin-bottom: 0; } }
+        margin: 35px auto 0; } }
     .about .personal-photo img {
       bottom: 0;
       left: 0;
@@ -692,17 +704,3 @@ body {
       right: 0;
       margin: auto;
       width: 150px; }
-  .skill-set .triangle {
-    border-bottom: 100px solid black;
-    border-left: 600px solid transparent;
-    border-right: 600px solid transparent;
-    display: none;
-    height: 0;
-    position: absolute;
-    transform: rotate(180deg);
-    width: 100%; }
-    @media only screen and (min-width: 960px) {
-      .skill-set .triangle {
-        border-bottom: 200px solid black;
-        border-right: 825px solid transparent;
-        display: block; } }
