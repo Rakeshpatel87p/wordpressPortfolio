@@ -53,7 +53,7 @@
 
     addScrollEvent() {
       window.addEventListener("scroll", () => {
-        this.handleUnderLineEffect();
+        setTimeout(() => this.handleUnderLineEffect(), 800)
         this.handleNavBarEffect();
       })
     }
