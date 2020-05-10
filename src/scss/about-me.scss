@@ -11,6 +11,21 @@
     padding: 100px 20px 0 0;
   }
 
+  .triangle {
+    border-left: 600px solid transparent;
+    display: none;
+    height: 0;
+    position: absolute;
+    transform: rotate(180deg);
+    width: 100%;
+
+    @include breakpoint($desktop) {
+      border-bottom: 200px solid black;
+      border-right: 525px solid transparent;
+      display: block;
+    }
+  }
+
   .personal-photo {
     border: 1px dashed black;
     border-bottom: 2px solid black;
@@ -24,7 +39,7 @@
     width: 310px;
 
     @include breakpoint($desktop) {
-      margin-bottom: 0;
+      margin: 35px auto 0;
     }
 
     img {

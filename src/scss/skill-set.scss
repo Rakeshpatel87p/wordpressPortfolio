@@ -150,21 +150,4 @@
       width: 150px;
     }
   }
-
-  .triangle {
-    border-bottom: 100px solid black;
-    border-left: 600px solid transparent;
-    border-right: 600px solid transparent;
-    display: none;
-    height: 0;
-    position: absolute;
-    transform: rotate(180deg);
-    width: 100%;
-
-    @include breakpoint($desktop) {
-      border-bottom: 200px solid black;
-      border-right: 825px solid transparent;
-      display: block;
-    }
-  }
 }
