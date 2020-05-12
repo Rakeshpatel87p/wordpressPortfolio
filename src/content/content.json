@@ -1,0 +1,97 @@
+{
+  "navigation": [
+    { "title": "about", "href": "#about" },
+    { "title": "portfolio", "href": "#portfolio" },
+    { "title": "contact", "href": "#contact" }
+  ],
+  "projects": [
+    {
+      "name": "Chick-fil-A",
+      "abrev": "cfa",
+      "description": "2 years of agile development. Work closely with Designers and Backend developers to create new features. Helped upgrade codebase to be ES6 and Typescript as well as upgraded JQuery to v3.",
+      "img": "img/portfolio/cfaImg.jpg"
+    },
+    {
+      "name": "Schwinn",
+      "abrev": "schwinn",
+      "description": "Worked under Senior Developer to deliver a pixel-perfect redesign of the website. Created reusable UI components including Product Card and Instagram feature.",
+      "img": "img/portfolio/schwinn.jpg"
+    },
+    {
+      "name": "Herschend Family Entertainment",
+      "abrev": "hfe",
+      "description": "Re-themed existing websites. Involed working with lots of legacy code, contributing to the product while maintaining the standards of the code.",
+      "img": "img/portfolio/hfe.jpg"
+    },
+    {
+      "name": "Cox Media Group",
+      "abrev": "cox-media",
+      "description": "Used Javascript to create realtime data reporting dashboard. Scrubbed data from 6 different API sources, migrated to SQL Database, and outputted to Google Data Studio.",
+      "img": "img/portfolio/coxMedia.jpg"
+    },
+    {
+      "name": "Online Store",
+      "abrev": "online-store",
+      "description": "Used React/Apollo to make GraphQL Queries and Mutations to a Prisma Database.",
+      "img": "img/portfolio/onlineStore.jpg"
+    },
+    {
+      "name": "Productivity App",
+      "abrev": "productiv-app",
+      "description": "Keep track of your time. Following Pomodoro Method, users can time themselves in completing tasks and see how they perform each week.",
+      "img": "img/portfolio/productivityApp.jpg"
+    },
+    {
+      "name": "Would You Rather Game",
+      "abrev": "rather-game",
+      "description": "Answer questions submitted by other users. Add your own questions for others to answer. Used React/Redux.",
+      "img": "img/portfolio/game.jpg"
+    }
+  ],
+  "skillSets": [
+    {
+      "skill": "Eye for design and creative spirit.",
+      "img": "img/abstract.png"
+    },
+    {
+      "skill": "Clean, maintainable, and tested code.",
+      "img": "img/bulb.png"
+    },
+    {
+      "skill": "Responsive and fun iterative process.",
+      "img": "img/friends.png"
+    }
+  ],
+  "socialIcons": [
+    {
+      "name": "github",
+      "icon": "img/socialIcons/github.svg",
+      "href": "https://github.com/Rakeshpatel87p"
+    },
+    {
+      "name": "instagram",
+      "icon": "img/socialIcons/instagram.svg",
+      "href": "https://www.instagram.com/paprika_fuego/"
+    },
+    {
+      "name": "linkedin",
+      "icon": "img/socialIcons/linkedin.svg",
+      "href": "https://www.linkedin.com/in/rakeshpatel87p/"
+    },
+    {
+      "name": "twitter",
+      "icon": "img/socialIcons/twitter.svg",
+      "href": "https://twitter.com/Rakesh_R_Patel"
+    }
+  ],
+  "techSkills": [
+    { "tech": "HTML", "percent": "90" },
+    { "tech": "CSS", "percent": "90" },
+    { "tech": "React", "percent": "90" },
+    { "tech": "Redux", "percent": "90" },
+    { "tech": "Apollo", "percent": "90" },
+    { "tech": "GraphQL", "percent": "90" },
+    { "tech": "Typescript", "percent": "90" },
+    { "tech": "Node", "percent": "90" }
+  ]
+}
