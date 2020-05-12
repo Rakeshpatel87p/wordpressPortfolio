@@ -60,6 +60,12 @@ function css() {
     .pipe(livereload());
 }
 
+function combineScripts() {
+  return src("src/js/*.js")
+    .pipe(concat("portfolio.js"))
+    .pipe(dest("public/js"));
+}
+
 function handleError(err) {
   console.log(err.toString());
 }
@@ -79,10 +85,16 @@ exports.default = function () {
     livereload.listen();
     cb();
   });
+  watch("src/js/*.js", cb => {
+    combineScripts();
+    livereload.listen();
+    cb();
+  });
 
   nunjucks();
   lintSass();
   css();
+  combineScripts();
   liveServer();
   parallel(css);
 };
