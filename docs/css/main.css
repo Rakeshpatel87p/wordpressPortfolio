@@ -648,6 +648,7 @@ body {
     .skill-set li p {
       font-size: 20px;
       font-weight: bold;
+      height: 100%;
       margin: auto;
       padding: 15px 25px 10px;
       position: relative;
