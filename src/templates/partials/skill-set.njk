@@ -15,7 +15,7 @@
                     Code</a></span>
         </h2>
         <ul>
-            {% for skill in skillSets %}
+            {% for skill in skillSets -%}
             <li>
                 <div class="art-container">
                     <div class="art">
@@ -27,7 +27,7 @@
                 </div>
                 <p>{{skill.skill}}</p>
             </li>
-            {% endfor %}
+            {%- endfor %}
         </ul>
     </div>
 </section>
