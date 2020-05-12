@@ -2,6 +2,7 @@ const { src, dest, parallel, watch } = require("gulp");
 const server = require("gulp-webserver");
 const livereload = require("gulp-livereload");
 const nunjucksRender = require("gulp-nunjucks-render");
+const htmlclean = require("gulp-htmlclean");
 var plumber = require("gulp-plumber");
 const sass = require("gulp-sass");
 const sassLint = require("gulp-sass-lint");
@@ -27,6 +28,7 @@ function nunjucks() {
         data: content,
       })
     )
+    .pipe(htmlclean())
     .pipe(dest("public/"))
     .pipe(livereload());
 }
