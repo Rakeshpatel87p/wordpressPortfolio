@@ -11,7 +11,7 @@ const log = require("fancy-log");
 const content = require("./src/content/content.json");
 
 function liveServer() {
-  return src("public/").pipe(
+  return src("docs/").pipe(
     server({
       livereload: true,
       open: true,
@@ -29,7 +29,7 @@ function nunjucks() {
       })
     )
     .pipe(htmlclean())
-    .pipe(dest("public/"))
+    .pipe(dest("docs/"))
     .pipe(livereload());
 }
 
@@ -55,15 +55,13 @@ function css() {
     )
     .on("error", handleError)
     .pipe(concat("main.css"))
-    .pipe(dest("public/css/"))
+    .pipe(dest("docs/css/"))
 
     .pipe(livereload());
 }
 
 function combineScripts() {
-  return src("src/js/*.js")
-    .pipe(concat("portfolio.js"))
-    .pipe(dest("public/js"));
+  return src("src/js/*.js").pipe(concat("portfolio.js")).pipe(dest("docs/js"));
 }
 
 function handleError(err) {
