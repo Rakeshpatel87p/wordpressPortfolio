@@ -1,13 +1,18 @@
 const { src, dest, parallel, watch } = require("gulp");
 const server = require("gulp-webserver");
 const livereload = require("gulp-livereload");
+const sourcemaps = require("gulp-sourcemaps");
+
 const nunjucksRender = require("gulp-nunjucks-render");
+
 const htmlclean = require("gulp-htmlclean");
 var plumber = require("gulp-plumber");
+
 const sass = require("gulp-sass");
 const sassLint = require("gulp-sass-lint");
 const concat = require("gulp-concat");
 const log = require("fancy-log");
+
 const content = require("./src/content/content.json");
 
 function liveServer() {
@@ -47,6 +52,7 @@ function lintSass() {
 
 function css() {
   return src("src/scss/*.scss")
+    .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(
       sass({
@@ -55,13 +61,18 @@ function css() {
     )
     .on("error", handleError)
     .pipe(concat("main.css"))
+    .pipe(sourcemaps.write())
     .pipe(dest("docs/css/"))
 
     .pipe(livereload());
 }
 
 function combineScripts() {
-  return src("src/js/*.js").pipe(concat("portfolio.js")).pipe(dest("docs/js"));
+  return src("src/js/*.js")
+    .pipe(sourcemaps.init())
+    .pipe(concat("portfolio.js"))
+    .pipe(sourcemaps.write())
+    .pipe(dest("docs/js"));
 }
 
 function handleError(err) {
