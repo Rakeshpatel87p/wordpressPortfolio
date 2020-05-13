@@ -10,6 +10,8 @@ var plumber = require("gulp-plumber");
 
 const sass = require("gulp-sass");
 const sassLint = require("gulp-sass-lint");
+
+const eslint = require("gulp-eslint");
 const concat = require("gulp-concat");
 const log = require("fancy-log");
 
@@ -70,6 +72,8 @@ function css() {
 function combineScripts() {
   return src("src/js/*.js")
     .pipe(sourcemaps.init())
+    .pipe(eslint())
+    .pipe(eslint.format())
     .pipe(concat("portfolio.js"))
     .pipe(sourcemaps.write())
     .pipe(dest("docs/js"));
