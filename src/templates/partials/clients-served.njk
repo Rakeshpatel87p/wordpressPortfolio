@@ -7,7 +7,10 @@
   <h3>Portfolio</h3>
   <div class="container">
     {% for project in projects %}
-    <a href="">
+    <a
+      href="{{project.href}}"
+      target="_blank"
+    >
       <div
         class="img"
         style="background-image: url('{{project.img}}')"
