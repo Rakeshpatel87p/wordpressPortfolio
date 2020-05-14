@@ -58,7 +58,7 @@
       flex-basis: 1;
       height: 100%;
       margin: 0 auto;
-      max-width: 1250px;
+      max-width: 1150px;
       white-space: normal;
     }
   }
@@ -69,6 +69,7 @@
 
     @include breakpoint($desktop) {
       margin: 0 50px 0 0;
+      width: 33%;
     }
 
     p {
@@ -119,8 +120,8 @@
     width: auto;
 
     @include breakpoint($desktop) {
-      margin: 0;
-      width: 300px;
+      margin: 0 auto;
+      max-width: 300px;
     }
   }
 
