@@ -17,7 +17,7 @@
   @include breakpoint($desktop) {
     bottom: 0;
     display: flex;
-    width: 15%;
+    width: 220px;
   }
 
   &::-webkit-scrollbar {
