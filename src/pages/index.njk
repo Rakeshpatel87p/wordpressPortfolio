@@ -1,18 +1,17 @@
 {% extends "layout.njk" %}
 
 {% block top %}
-
-{% include "partials/navbar.njk" %}
-{% include "partials/hero.njk" %}
-
+  {% include "partials/navbar.njk" %}
+  {% include "partials/hero.njk" %}
 {% endblock %}
 
 {% block main %}
+  {% include "partials/skill-set.njk" %}
+  {% include "partials/about-me.njk" %}
+  {% include "partials/clients-served.njk" %}
+  {% include 'partials/contact.njk' %}
+{% endblock %}
 
-{% include "partials/skill-set.njk" %}
-{% include "partials/about-me.njk" %}
-{% include "partials/clients-served.njk" %}
-{% include 'partials/contact.njk' %}
-{% include 'partials/footer.njk' %}
-
+{% block footer %}
+  {% include 'partials/footer.njk' %}
 {% endblock %}
