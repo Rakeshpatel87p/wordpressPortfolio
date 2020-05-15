@@ -1,9 +1,14 @@
 {% extends "layout.njk" %}
 
-{% block content %}
+{% block top %}
 
 {% include "partials/navbar.njk" %}
 {% include "partials/hero.njk" %}
+
+{% endblock %}
+
+{% block main %}
+
 {% include "partials/skill-set.njk" %}
 {% include "partials/about-me.njk" %}
 {% include "partials/clients-served.njk" %}
