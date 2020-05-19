@@ -21,10 +21,9 @@
     letter-spacing: 1.25px;
     margin-bottom: 50px;
     text-align: center;
-    text-transform: uppercase;
 
     @include breakpoint($desktop) {
-      display: none;
+      font-size: 50px;
     }
   }
 
@@ -99,31 +98,45 @@
 
     &:nth-child(1) {
       grid-area: a;
-      animation-delay: calc(1 * var(--stagger-delay));
+      animation-delay: calc(
+        1 * var(--stagger-delay)
+      );
     }
     &:nth-child(2) {
       grid-area: b;
-      animation-delay: calc(2 * var(--stagger-delay));
+      animation-delay: calc(
+        2 * var(--stagger-delay)
+      );
     }
     &:nth-child(3) {
       grid-area: c;
-      animation-delay: calc(3 * var(--stagger-delay));
+      animation-delay: calc(
+        3 * var(--stagger-delay)
+      );
     }
     &:nth-child(4) {
       grid-area: d;
-      animation-delay: calc(4 * var(--stagger-delay));
+      animation-delay: calc(
+        4 * var(--stagger-delay)
+      );
     }
     &:nth-child(5) {
       grid-area: e;
-      animation-delay: calc(5 * var(--stagger-delay));
+      animation-delay: calc(
+        5 * var(--stagger-delay)
+      );
     }
     &:nth-child(6) {
       grid-area: f;
-      animation-delay: calc(6 * var(--stagger-delay));
+      animation-delay: calc(
+        6 * var(--stagger-delay)
+      );
     }
     &:last-child {
       grid-area: x;
-      animation-delay: calc(7 * var(--stagger-delay));
+      animation-delay: calc(
+        7 * var(--stagger-delay)
+      );
     }
 
     .img {
