@@ -9,7 +9,9 @@ footer {
   ul {
     display: flex;
     justify-content: center;
+    height: 100%;
     list-style-type: none;
+    overflow-y: hidden;
 
     li {
       margin-right: 10px;
