@@ -33,11 +33,7 @@
     }
 
     .underline--magical {
-      background-image: linear-gradient(
-        120deg,
-        #84fab0 0%,
-        #8fd3f4 100%
-      );
+      background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
       background-repeat: no-repeat;
       background-size: 100% 0.2em;
       background-position: 0 105%;
@@ -52,6 +48,7 @@
 
   ul {
     font-family: $secondary-font;
+    font-style: italic;
     margin: 30px auto 0;
     padding: 0;
 
@@ -98,6 +95,7 @@
       &:before,
       &:after {
         font-family: $primary-font;
+        font-style: normal;
         position: absolute;
         top: 0;
         font-size: 65px;
@@ -135,8 +133,7 @@
   }
 
   .art {
-    box-shadow: 0px 0px 10px 0px
-      rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5) inset;
     display: flex;
     height: 100%;
     margin: auto;
@@ -149,8 +146,7 @@
       top: 0;
       width: 100%;
       height: 100%;
-      box-shadow: 0px 0px 20px 0px
-        rgba(0, 0, 0, 0.5) inset;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5) inset;
     }
 
     img {

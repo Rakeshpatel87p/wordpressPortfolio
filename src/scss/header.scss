@@ -8,6 +8,7 @@ header {
   display: block;
   height: 0;
   font-family: $secondary-font;
+  font-style: italic;
   justify-content: space-between;
   padding: 0 20px;
   position: fixed;
@@ -42,6 +43,7 @@ header {
 
     h3 {
       font-family: $secondary-font;
+      font-style: italic;
       margin-bottom: -6px;
     }
   }
