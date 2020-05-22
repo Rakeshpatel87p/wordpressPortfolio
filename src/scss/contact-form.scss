@@ -3,6 +3,7 @@
 .contact-form {
   color: white;
   font-family: $secondary-font;
+  font-style: italic;
 
   .wrapper {
     background: black;
@@ -27,6 +28,48 @@
   form {
     margin: auto;
     max-width: 500px;
+
+    div {
+      border-bottom: 2px dashed white;
+      padding-top: 30px;
+      overflow-y: hidden;
+      position: relative;
+      transition: 500ms;
+
+      &:after {
+        content: "";
+        position: relative;
+        display: block;
+        height: 4px;
+        width: 100%;
+        background: $main-pink;
+        transform: scaleX(0);
+        transform-origin: 0%;
+        opacity: 0;
+        transition: all 500ms ease;
+        top: 2px;
+      }
+
+      &:focus {
+        border: none;
+      }
+
+      &:focus-within {
+        border-color: transparent;
+      }
+
+      &:focus-within label,
+      input:not(:placeholder-shown) + label,
+      textarea:not(:placeholder-shown) + label {
+        transform: scale(0.8) translateY(-5rem);
+        opacity: 1;
+      }
+
+      &:focus-within::after {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+    }
   }
 
   .header {
@@ -60,20 +103,38 @@
 
   textarea,
   input {
+    background: black;
+    border: none;
+    color: $main-pink;
     font-size: 15px;
     height: 35px;
-    padding: 10px;
+    overflow: hidden;
+    padding: 10px 4px;
     margin-top: 5px;
+    transition: border 500ms;
     width: 100%;
-  }
 
-  textarea {
-    min-height: 150px;
+    &:focus {
+      outline: none;
+    }
+
+    &:valid {
+      color: white;
+    }
+
+    &:invalid {
+      color: orangered;
+    }
   }
 
   label {
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.8px;
+    position: absolute;
+    pointer-events: none;
+    transform: translateY(-2rem);
+    transform-origin: 0%;
+    transition: transform 400ms;
   }
 
   button {
