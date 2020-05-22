@@ -61,7 +61,7 @@
       &:focus-within label,
       input:not(:placeholder-shown) + label,
       textarea:not(:placeholder-shown) + label {
-        transform: scale(0.8) translateY(-5rem);
+        transform: scale(0.8) translateY(-2.5rem);
         opacity: 1;
       }
 
@@ -78,6 +78,7 @@
     h3 {
       font-family: $primary-font;
       font-size: 25px;
+      font-style: normal;
       font-weight: normal;
       letter-spacing: 0.8px;
       margin-bottom: 20px;
@@ -128,11 +129,13 @@
   }
 
   label {
+    bottom: 10px;
     font-size: 18px;
     letter-spacing: 0.8px;
+    left: 0;
     position: absolute;
     pointer-events: none;
-    transform: translateY(-2rem);
+    transform: translateY(0rem);
     transform-origin: 0%;
     transition: transform 400ms;
   }
