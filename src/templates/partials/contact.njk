@@ -15,28 +15,32 @@
 			method="POST"
 		>
 			<div>
-				<label>Your Name</label>
 				<input
 					name="_name"
+					placeholder=" "
+					type="text"
 					required
 				/>
+				<label>Your Name</label>
 			</div>
 			<div>
-				<label>Your Email</label>
 				<input
 					type="email"
+					placeholder=" "
 					name="email"
 					required
 				/>
+				<label>Your Email</label>
 			</div>
 			<div>
-				<label>Message</label>
 				<textarea
+					placeholder=" "
 					name="message"
 					cols="30"
-					rows="10"
+					rows="1"
 					required
 				></textarea>
+				<label>Message</label>
 			</div>
 			<button id="my-form-button">Submit</button>
 			<p id="my-form-status"></p>
