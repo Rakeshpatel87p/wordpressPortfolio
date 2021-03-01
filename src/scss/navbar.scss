@@ -17,7 +17,7 @@
   @include breakpoint($desktop) {
     bottom: 0;
     display: flex;
-    width: 220px;
+    width: 250px;
   }
 
   &::-webkit-scrollbar {
@@ -83,10 +83,8 @@
 
   p {
     color: $main-pink;
-    font-family: $secondary-font;
     font-style: italic;
     font-size: 20px;
-    font-weight: bold;
     letter-spacing: 1px;
     margin-top: 5px;
     text-transform: uppercase;
